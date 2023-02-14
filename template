@@ -1,0 +1,18 @@
+module {block_tx}
+    imports VERIORACLE
+    claim <k>
+        Attacker in BUSD swaps Alpha:Int for LUNA output;
+        Attacker deposits Alpha:Int LUNA to Venus;
+        Attacker borrows Beta:Int BUSD from Venus;
+        => . ...
+    </k>
+    <Block> .List => ?_  </Block>
+    <Oracle> (Chainlink in LUNA) |-> {oracle_price} => ?_  </Oracle>
+    <State> (Dex in LUNA) |-> {reserve0} (Dex in BUSD) |-> {reserve1} => ?S:Map </State>
+    requires (Alpha > 0) 
+        andBool (Alpha < {reserve0} / 10) 
+        andBool (Beta > 0} 
+        andBool (Beta < Alpha *{oracle_price} *{CollateralFactor} *{liquidateRatio} ) )
+    ensures ?S[Attacker in BUSD] < 0
+endmodule
+

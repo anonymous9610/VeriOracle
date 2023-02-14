@@ -1,0 +1,1383 @@
+module AMMDEX [org.kframework.attributes.Location(Location(17,1,56,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/ammdex.k))]
+  imports EXECUTION
+  imports AMMDEX-SYNTAX
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token)),_DotVar1)=>#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,`_-Int_`(#token("0","Int"),TokenAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),`_-Int_`(#token("0","Int"),ETHAmount)),_DotVar1))),THE_VARIABLE,`<B>`(`_List_`(_DotVar2)=>`_List_`(_DotVar2,`ListItem`(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token)))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(37e0c70be1d2767218b528b12c68fa1adda81182ac9809085b2a8f2ee851398b), org.kframework.attributes.Location(Location(51,10,55,133)), org.kframework.attributes.Source(Source(/root/cff/venus-model/ammdex.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut)),_DotVar1)=>#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),TradeAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount)))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount))))),_DotVar1))))),`<S>`(_Gen3),`<B>`(`_List_`(_DotVar3)=>`_List_`(_DotVar3,`ListItem`(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut)))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires `_andBool_`(`_andBool_`(#match(USwapBalanceOut,`Map:lookup`(_Gen3,`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut))),#match(_DotVar2,`_[_<-undef]`(`_[_<-undef]`(_Gen3,`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut)),`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn)))),#match(USwapBalanceIn,`Map:lookup`(_Gen3,`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn)))) ensures #token("true","Bool") [UNIQUE_ID(310f6c269f2feab407c0d5268815d5617c49ace08d9ac27d8d17377b566c94b2), org.kframework.attributes.Location(Location(21,10,29,97)), org.kframework.attributes.Source(Source(/root/cff/venus-model/ammdex.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut)),_DotVar1)=>#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int")))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int"))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),TradeAmount)),_DotVar1))))),`<S>`(_Gen3),`<B>`(`_List_`(_DotVar3)=>`_List_`(_DotVar3,`ListItem`(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut)))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires `_andBool_`(`_andBool_`(#match(USwapBalanceOut,`Map:lookup`(_Gen3,`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut))),#match(_DotVar2,`_[_<-undef]`(`_[_<-undef]`(_Gen3,`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut)),`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn)))),#match(USwapBalanceIn,`Map:lookup`(_Gen3,`_in__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn)))) ensures #token("true","Bool") [UNIQUE_ID(0cbd805da06cd90db28a735446cb00a0c83d22e2917f583a78b79b75b23c0b5c), org.kframework.attributes.Location(Location(32,10,40,98)), org.kframework.attributes.Source(Source(/root/cff/venus-model/ammdex.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token)),_DotVar1)=>#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,TokenAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),ETHAmount),_DotVar1))),THE_VARIABLE,`<B>`(`_List_`(_DotVar2)=>`_List_`(_DotVar2,`ListItem`(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token)))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(cbc1edb449532e9b617228e07da13e0ed307944c702b4cf08971b8c8d1bd861c), org.kframework.attributes.Location(Location(45,10,49,128)), org.kframework.attributes.Source(Source(/root/cff/venus-model/ammdex.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KRewrite(#Or(#And(#KSequence(#Or(#And(`_;_EXECUTION-SYNTAX`(S),#Or(isRule(#token("-1540721713","K")))),#And(`_in_gets__EXECUTION-SYNTAX`(Address,Token,#Or(#And(_Gen0,isRule(#token("-1338777280","K"))),#And(Amount,isRule(#token("1849042245","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),#Or(isRule(#token("-1475649852","K")))),#And(`exec(_)_EXECUTION-SYNTAX`(#Or(#And(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token),#Or(isRule(#token("569059051","K")))),#And(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut),#Or(isRule(#token("-1451647566","K")))),#And(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut),#Or(isRule(#token("-717109357","K")))),#And(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token),#Or(isRule(#token("289552968","K")))))),#Or(isRule(#token("569059051","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))),#And(`__;_EXECUTION-SYNTAX`(B,S),#Or(isRule(#token("-1378298002","K")))),#And(TX,isRule(#token("-78552503","K")))),#Or(#And(_DotVar1,#Or(isRule(#token("569059051","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-717109357","K")),isRule(#token("-1475649852","K")))),#And(THE_VARIABLE,isRule(#token("-1338777280","K"))))),#Or(isRule(#token("569059051","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-717109357","K")),isRule(#token("-1475649852","K")))),#And(#EmptyK(.KList),#Or(isRule(#token("-842550567","K"))))),#Or(#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,TokenAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),ETHAmount),_DotVar1)),isRule(#token("569059051","K"))),#And(#KSequence(S,_DotVar1),isRule(#token("-1540721713","K"))),#And(_DotVar1,isRule(#token("1849042245","K"))),#And(`DONE_EXECUTION-SYNTAX`(.KList),isRule(#token("-842550567","K"))),#And(#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1),isRule(#token("-78552503","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1),isRule(#token("-1475649852","K"))),#And(#KSequence(B,#KSequence(S,_DotVar1)),isRule(#token("-1378298002","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int")))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int"))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),TradeAmount)),_DotVar1)))),isRule(#token("-1451647566","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),TradeAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount)))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount))))),_DotVar1)))),isRule(#token("-717109357","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,`_-Int_`(#token("0","Int"),TokenAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),`_-Int_`(#token("0","Int"),ETHAmount)),_DotVar1)),isRule(#token("289552968","K")))))),#Or(#And(`<S>`(#KRewrite(#Or(#And(_Gen3,#Or(isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))),#And(_Gen4,isRule(#token("1849042245","K"))),#And(B,isRule(#token("-1338777280","K")))),#Or(#And(`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int")),isRule(#token("-1338777280","K"))),#And(`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2),isRule(#token("1849042245","K")))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-717109357","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("569059051","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<B>`(#KRewrite(`_List_`(#Or(#And(_DotVar3,#Or(isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))),#And(_DotVar2,#Or(isRule(#token("569059051","K")),isRule(#token("289552968","K")))))),#Or(#And(`_List_`(_DotVar3,`ListItem`(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut))),isRule(#token("-717109357","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token))),isRule(#token("569059051","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token))),isRule(#token("289552968","K"))),#And(`_List_`(_DotVar3,`ListItem`(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut))),isRule(#token("-1451647566","K")))))),#Or(isRule(#token("569059051","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K"))))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [mainAutomaton]
+endmodule
+
+
+module AMMDEX-SYNTAX [org.kframework.attributes.Location(Location(3,1,15,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/ammdex.k))]
+  imports EXECUTION-SYNTAX
+  syntax KItem ::= AmmDexTx
+  syntax K
+  syntax EVMTransaction ::= AmmDexTx
+  syntax EVMAddress ::= "UniDex"
+  syntax Bool ::= "isAmmDexTx" "(" K ")" [function, functional, predicate(AmmDexTx)]
+  syntax AmmDexTx ::= EVMAddress "removes" Int "tokens and" Int "eth of liquidity from" EVMAddress
+  syntax AmmDexTx ::= EVMAddress "in" EVMAddress "swaps" Int "input" "for" EVMAddress
+  syntax AmmDexTx ::= EVMAddress "in" EVMAddress "swaps" Int "for" EVMAddress "output"
+  syntax AmmDexTx ::= EVMAddress "adds" Int "tokens and" Int "eth of liquidity to" EVMAddress
+  syntax AmmDexTx ::= "project:AmmDexTx" "(" K ")" [function, projection]
+  rule `project:AmmDexTx`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module ARRAY-SYNTAX [org.kframework.attributes.Location(Location(73,1,136,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports LIST
+  syntax KItem ::= Array "[" Int "]" [function, hook(ARRAY.lookup)]
+  syntax KItem ::= Array
+  syntax K
+  syntax Bool ::= Int "in_keys" "(" Array ")" [function, functional, hook(ARRAY.in_keys)]
+  syntax Bool ::= "isArray" "(" K ")" [function, functional, predicate(Array)]
+  syntax Array [element(_[_<-_]), hook(ARRAY.Array), org.kframework.attributes.Location(Location(76,3,76,70)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), unit(arrayCtor)]
+  syntax Array ::= Array "[" Int "<-" KItem "]" [function, hook(ARRAY.update), klabel(_[_<-_]), symbol]
+  syntax Array ::= Array "[" Int "<-" "undef" "]" [function, hook(ARRAY.remove)]
+  syntax Array ::= "updateArray" "(" Array "," Int "," List ")" [function, hook(ARRAY.updateAll), klabel(updateArray)]
+  syntax Array ::= "project:Array" "(" K ")" [function, projection]
+  syntax Array ::= "fillArray" "(" Array "," Int "," Int "," KItem ")" [function, hook(ARRAY.fill), klabel(fillArray)]
+  rule `project:Array`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module AUTO-CASTS [org.kframework.attributes.Location(Location(373,1,381,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+endmodule
+
+
+module AUTO-FOLLOW [org.kframework.attributes.Location(Location(383,1,394,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+endmodule
+
+
+module BASIC-K [org.kframework.attributes.Location(Location(35,1,41,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-BOOL
+  imports ML-SYNTAX
+  syntax KItem [hook(K.KItem), org.kframework.attributes.Location(Location(38,3,38,31)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax KConfigVar [org.kframework.attributes.Location(Location(40,3,40,28)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md)), token]
+  syntax K ::= KItem
+  syntax K
+  syntax Bool ::= "isKConfigVar" "(" K ")" [function, functional, predicate(KConfigVar)]
+endmodule
+
+
+module BOOL [org.kframework.attributes.Location(Location(883,1,886,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports BOOL-COMMON
+endmodule
+
+
+module BOOL-COMMON [org.kframework.attributes.Location(Location(793,1,867,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports BOOL-SYNTAX
+  imports BASIC-K
+  syntax priority notBool_ > _orElseBool_ _orBool_ _andThenBool_ _impliesBool_ _andBool_ _xorBool_ > _==Bool_ _=/=Bool_
+  syntax associativity left _xorBool_
+  syntax associativity left _orElseBool_
+  syntax associativity left _orBool_
+  syntax associativity left _impliesBool_
+  syntax associativity left _andThenBool_
+  syntax associativity left _andBool_
+  syntax associativity left _==Bool_ _=/=Bool_
+  syntax associativity left _==Bool_
+  syntax associativity left _=/=Bool_
+  syntax Bool ::= Bool "xorBool" Bool [boolOperation, function, functional, hook(BOOL.xor), klabel(_xorBool_), left, smt-hook(xor), symbol]
+  syntax Bool ::= Bool "orElseBool" Bool [boolOperation, function, functional, hook(BOOL.orElse), klabel(_orElseBool_), left, smt-hook(or), symbol]
+  syntax Bool ::= Bool "orBool" Bool [boolOperation, function, functional, hook(BOOL.or), klabel(_orBool_), latex({#1}\vee_{\scriptstyle\it Bool}{#2}), left, smt-hook(or), symbol]
+  syntax Bool ::= Bool "impliesBool" Bool [boolOperation, function, functional, hook(BOOL.implies), klabel(_impliesBool_), left, smt-hook(=>), symbol]
+  syntax Bool ::= Bool "andThenBool" Bool [boolOperation, function, functional, hook(BOOL.andThen), klabel(_andThenBool_), left, smt-hook(and), symbol]
+  syntax Bool ::= Bool "andBool" Bool [boolOperation, function, functional, hook(BOOL.and), klabel(_andBool_), latex({#1}\wedge_{\scriptstyle\it Bool}{#2}), left, smt-hook(and), symbol]
+  syntax Bool ::= Bool "==Bool" Bool [function, functional, hook(BOOL.eq), klabel(_==Bool_), left, smt-hook(=), symbol]
+  syntax Bool ::= Bool "=/=Bool" Bool [function, functional, hook(BOOL.ne), klabel(_=/=Bool_), left, smt-hook(distinct), symbol]
+  syntax Bool ::= "notBool" Bool [boolOperation, function, functional, hook(BOOL.not), klabel(notBool_), latex(\neg_{\scriptstyle\it Bool}{#1}), smt-hook(not), symbol]
+  rule `notBool_`(#token("true","Bool"))=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(53fc758ece1ff16581673016dfacc556cc30fcf6b3c35b586f001d76a1f9336c), org.kframework.attributes.Location(Location(834,8,834,29)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `notBool_`(#token("false","Bool"))=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(17ebc68421572b8ebe609c068fb49cbb6cbbe3246e2142257ad8befdda38f415), org.kframework.attributes.Location(Location(835,8,835,29)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_xorBool_`(B,B)=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(9a6d91cd75cd777b0d4db536b3e4b20578e74fe650e644b55294da95fd2dba7f), org.kframework.attributes.Location(Location(849,8,849,38)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_xorBool_`(B,#token("false","Bool"))=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(7a2851f9d4ea4bd3f35070ee029fc3bdca36e361f7ee54addeff9d10ddeb7c75), org.kframework.attributes.Location(Location(848,8,848,38)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_xorBool_`(#token("false","Bool"),B)=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(73513655c09a595907ab9d26d67e27f01d14a3435743b77000c02d10f35c05bf), org.kframework.attributes.Location(Location(847,8,847,38)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orElseBool_`(_Gen0,#token("true","Bool"))=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(c9eccff94ecf6e810c600d4536bf1701485c13c3456c6b98c0cdab0fe7c5af14), org.kframework.attributes.Location(Location(857,8,857,33)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orElseBool_`(K,#token("false","Bool"))=>K requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(684b0444a1f711d49ff1502423a3346fb26958697423db488b05d25081fc0480), org.kframework.attributes.Location(Location(859,8,859,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orElseBool_`(#token("true","Bool"),_Gen0)=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(354bd0860c7f38b59e285c935fd2ea553ebddbabb4973342ad25f0dac6ea7bf6), org.kframework.attributes.Location(Location(856,8,856,33)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orElseBool_`(#token("false","Bool"),K)=>K requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(eb8c85dac19a5951f694b65269c2b17c80d6d126d6a367958e4a5d736a880ecf), org.kframework.attributes.Location(Location(858,8,858,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orBool_`(_Gen0,#token("true","Bool"))=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(47860d52c18a441b229449cd89d5464256137dc32deb5551effbac0482c883f3), org.kframework.attributes.Location(Location(852,8,852,34)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orBool_`(B,#token("false","Bool"))=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d7245713da157cf997438091f92bb78eb51a6cefa568bb0d30560ce08d647f26), org.kframework.attributes.Location(Location(854,8,854,32)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orBool_`(#token("true","Bool"),_Gen0)=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(71744528cdad83bc729990d3af3b544d27b09630b2615ca707dd2fc6ec93e7c2), org.kframework.attributes.Location(Location(851,8,851,34)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_orBool_`(#token("false","Bool"),B)=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(991a3290bc7b6dca75d676a72a848ec6b2bd2827fb0e9626252aa1507394ca1b), org.kframework.attributes.Location(Location(853,8,853,32)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_impliesBool_`(_Gen0,#token("true","Bool"))=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(99ba64afc26a739953df142ccd4b486bba68107fce8c9aa356d40afa7a988712), org.kframework.attributes.Location(Location(863,8,863,39)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_impliesBool_`(B,#token("false","Bool"))=>`notBool_`(B) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(022c562a21d72cedfb795607d2249b8ad14b66399b720b3b2f4a05a1da08df96), org.kframework.attributes.Location(Location(864,8,864,45)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_impliesBool_`(#token("true","Bool"),B)=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(da818c43c21c5fb2cced7e02a74b6b4191d323de2967a671b961ad28550f3c7d), org.kframework.attributes.Location(Location(861,8,861,36)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_impliesBool_`(#token("false","Bool"),_Gen0)=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(55bb5c83c9563c712537b95401c0a5c88255fd7cdbd18b2d4358c54aee80660e), org.kframework.attributes.Location(Location(862,8,862,40)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andThenBool_`(_Gen0,#token("false","Bool"))=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(0508592878b546cbc6eeda6ec7b322584eea5c6d6eea3f72be8418fe4f7149b2), org.kframework.attributes.Location(Location(845,8,845,36)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andThenBool_`(K,#token("true","Bool"))=>K requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(82ac30b094be9b12206773d87b60274e929a41ca595f4674be1d37eeff873d7c), org.kframework.attributes.Location(Location(843,8,843,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andThenBool_`(#token("true","Bool"),K)=>K requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(78a3191cbbdec57b0f411f41291076c8124bb0d9b6b57905674b2c6858d78689), org.kframework.attributes.Location(Location(842,8,842,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andThenBool_`(#token("false","Bool"),_Gen0)=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(5b729746be7bf2183d9eff138d97078a7c9489def6d8b2e1495c41ce3954997d), org.kframework.attributes.Location(Location(844,8,844,36)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andBool_`(_Gen0,#token("false","Bool"))=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(9c183fae7de06f560180386d14d29c609cadf0c98266ce2adbecb50100a1daca), org.kframework.attributes.Location(Location(840,8,840,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andBool_`(B,#token("true","Bool"))=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(e8d4ca75a690151f99f8904b068db555782f5599b11230a9d0b97a71afb6fc98), org.kframework.attributes.Location(Location(838,8,838,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andBool_`(#token("true","Bool"),B)=>B requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(5b9db8dba12010819161cc42dadccd0adf0100a47c21f884ae66c0a3d5483a1f), org.kframework.attributes.Location(Location(837,8,837,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_andBool_`(#token("false","Bool"),_Gen0)=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(61fbef33b3611f1cc2aaf3b5e8ddec4a0f434c557278c38461c65c8722743497), org.kframework.attributes.Location(Location(839,8,839,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_=/=Bool_`(B1,B2)=>`notBool_`(`_==Bool_`(B1,B2)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(31fe72efcfddcd8588a11d9d10c1b1a9f96ae3da46b647d4cb9d1e8b1bd1654f), org.kframework.attributes.Location(Location(866,8,866,57)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module BOOL-SYNTAX [org.kframework.attributes.Location(Location(787,1,791,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports SORT-BOOL
+  syntax K
+  syntax Bool ::= "true" [token]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "false" [token]
+endmodule
+
+
+module BUILTIN-ID-TOKENS [org.kframework.attributes.Location(Location(62,1,65,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  syntax Bool ::= "is#UpperId" "(" K ")" [function, functional, predicate(#UpperId)]
+  syntax Bool ::= "is#LowerId" "(" K ")" [function, functional, predicate(#LowerId)]
+  syntax #UpperId ::= r"[A-Z][a-zA-Z0-9]*" [prec(2), token]
+  syntax #LowerId ::= r"[a-z][a-zA-Z0-9]*" [prec(2), token]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module BYTES-HOOKED [org.kframework.attributes.Location(Location(1728,1,1888,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING-SYNTAX
+  imports BYTES-SYNTAX
+  syntax associativity right _+Bytes__BYTES-HOOKED
+  syntax String ::= "Bytes2String" "(" Bytes ")" [function, functional, hook(BYTES.bytes2string), klabel(Bytes2String)]
+  syntax Signedness ::= "project:Signedness" "(" K ")" [function, projection]
+  syntax Signedness ::= "Unsigned" [klabel(unsignedBytes), symbol]
+  syntax Signedness ::= "Signed" [klabel(signedBytes), symbol]
+  syntax KItem ::= Signedness
+  syntax KItem ::= Int
+  syntax KItem ::= Endianness
+  syntax K
+  syntax Int ::= Bytes "[" Int "]" [function, hook(BYTES.get)]
+  syntax Int ::= "project:Int" "(" K ")" [function, projection]
+  syntax Int ::= "lengthBytes" "(" Bytes ")" [function, functional, hook(BYTES.length), klabel(lengthBytes), smtlib(lengthBytes)]
+  syntax Int ::= "Bytes2Int" "(" Bytes "," Endianness "," Signedness ")" [function, functional, hook(BYTES.bytes2int), klabel(Bytes2Int)]
+  syntax Endianness ::= "project:Endianness" "(" K ")" [function, projection]
+  syntax Endianness ::= "LE" [klabel(littleEndianBytes), symbol]
+  syntax Endianness ::= "BE" [klabel(bigEndianBytes), symbol]
+  syntax Bytes ::= Bytes "[" Int "<-" Int "]" [function, hook(BYTES.update)]
+  syntax Bytes ::= Bytes "+Bytes" Bytes [function, functional, hook(BYTES.concat), right]
+  syntax Bytes ::= "substrBytes" "(" Bytes "," Int "," Int ")" [function, hook(BYTES.substr), klabel(substrBytes)]
+  syntax Bytes ::= "reverseBytes" "(" Bytes ")" [function, functional, hook(BYTES.reverse), klabel(reverseBytes)]
+  syntax Bytes ::= "replaceAtBytes" "(" Bytes "," Int "," Bytes ")" [function, hook(BYTES.replaceAt), klabel(replaceAtBytes)]
+  syntax Bytes ::= "padRightBytes" "(" Bytes "," Int "," Int ")" [function, hook(BYTES.padRight), klabel(padRightBytes)]
+  syntax Bytes ::= "padLeftBytes" "(" Bytes "," Int "," Int ")" [function, hook(BYTES.padLeft), klabel(padLeftBytes)]
+  syntax Bytes ::= "String2Bytes" "(" String ")" [function, functional, hook(BYTES.string2bytes), klabel(String2Bytes)]
+  syntax Bytes ::= "Int2Bytes" "(" Int "," Int "," Endianness ")" [function, functional, hook(BYTES.int2bytes), klabel(Int2Bytes)]
+  syntax Bytes ::= "Int2Bytes" "(" Int "," Endianness "," Signedness ")" [function, functional, klabel(Int2BytesNoLen)]
+  syntax Bytes ::= ".Bytes" [function, functional, hook(BYTES.empty)]
+  syntax Bool ::= "isSignedness" "(" K ")" [function, functional, predicate(Signedness)]
+  syntax Bool ::= "isInt" "(" K ")" [function, functional, predicate(Int)]
+  syntax Bool ::= "isEndianness" "(" K ")" [function, functional, predicate(Endianness)]
+  rule `project:Signedness`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Int`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Endianness`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module BYTES-SYNTAX [org.kframework.attributes.Location(Location(1705,1,1710,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING-SYNTAX
+  syntax KItem ::= Bytes
+  syntax K
+  syntax Bytes [hook(BYTES.Bytes), org.kframework.attributes.Location(Location(1708,3,1708,35)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax Bytes ::= r"b[\\\"](([^\\\"\\n\\r\\\\])|([\\\\][nrtf\\\"\\\\])|([\\\\][x][0-9a-fA-F]{2})|([\\\\][u][0-9a-fA-F]{4})|([\\\\][U][0-9a-fA-F]{8}))*[\\\"]" [token]
+  syntax Bytes ::= "project:Bytes" "(" K ")" [function, projection]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBytes" "(" K ")" [function, functional, predicate(Bytes)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:Bytes`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module CONFIG-CELLS [org.kframework.attributes.Location(Location(299,1,312,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports RULE-LISTS
+  imports KCELLS
+  syntax K
+  syntax Cell ::= "<" #CellName #CellProperties ">" K "</" #CellName ">" [klabel(#configCell), symbol]
+  syntax Cell ::= "<" #CellName "/>" [klabel(#externalCell), symbol]
+  syntax Bool ::= "is#CellProperty" "(" K ")" [function, functional, predicate(#CellProperty)]
+  syntax Bool ::= "is#CellProperties" "(" K ")" [function, functional, predicate(#CellProperties)]
+  syntax Bool ::= "is#CellName" "(" K ")" [function, functional, predicate(#CellName)]
+  syntax #CellProperty ::= #CellName "=" KString [klabel(#cellProperty), symbol]
+  syntax #CellProperties ::= #CellProperty #CellProperties [klabel(#cellPropertyList), symbol]
+  syntax #CellProperties ::= "" [klabel(#cellPropertyListTerminator), symbol]
+  syntax #CellName ::= r"[a-zA-Z][a-zA-Z0-9\\-]*" [prec(1), token]
+  syntax #CellName ::= #UpperId [token]
+  syntax #CellName ::= #LowerId [token]
+endmodule
+
+
+module DEFAULT-LAYOUT [org.kframework.attributes.Location(Location(506,1,510,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  syntax Bool ::= "is#Layout" "(" K ")" [function, functional, predicate(#Layout)]
+  syntax #Layout ::= r"(\\/\\/[^\\n\\r]*)"
+  syntax #Layout ::= r"(\\/\\*([^\\*]|(\\*+([^\\*\\/])))*\\*+\\/)"
+  syntax #Layout ::= r"([\\ \\n\\r\\t])"
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module DOMAINS [org.kframework.attributes.Location(Location(47,1,59,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING
+  imports SET
+  imports MAP
+  imports LIST
+  imports K-IO
+  imports K-EQUAL
+  imports INT
+  imports ID
+  imports DOMAINS-SYNTAX
+  imports BOOL
+  imports BASIC-K
+endmodule
+
+
+module DOMAINS-SYNTAX [org.kframework.attributes.Location(Location(39,1,45,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports UNSIGNED-INT-SYNTAX
+  imports STRING-SYNTAX
+  imports SORT-K
+  imports ID-SYNTAX
+  imports BOOL-SYNTAX
+endmodule
+
+
+module EXECUTION [org.kframework.attributes.Location(Location(17,1,59,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k))]
+  imports MAP
+  imports EXECUTION-SYNTAX
+  imports DOMAINS
+  syntax VaultCellOpt ::= VaultCell
+  syntax VaultCellOpt ::= "project:VaultCellOpt" "(" K ")" [function, projection]
+  syntax VaultCellOpt ::= "noVaultCell" [cellOptAbsent(VaultCell)]
+  syntax VaultCell ::= "project:VaultCell" "(" K ")" [function, projection]
+  syntax VaultCell ::= "initVaultCell" [function, initializer, noThread]
+  syntax VaultCell ::= "<Vault>" Map "</Vault>" [cell, cellName(Vault), format(%1%i%n%2%d%n%3), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  syntax SCellOpt ::= SCell
+  syntax SCellOpt ::= "project:SCellOpt" "(" K ")" [function, projection]
+  syntax SCellOpt ::= "noSCell" [cellOptAbsent(SCell)]
+  syntax SCell ::= "project:SCell" "(" K ")" [function, projection]
+  syntax SCell ::= "initSCell" [function, initializer, noThread]
+  syntax SCell ::= "<S>" Map "</S>" [cell, cellName(S), format(%1%i%n%2%d%n%3), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  syntax OracleCellOpt ::= OracleCell
+  syntax OracleCellOpt ::= "project:OracleCellOpt" "(" K ")" [function, projection]
+  syntax OracleCellOpt ::= "noOracleCell" [cellOptAbsent(OracleCell)]
+  syntax OracleCell ::= "project:OracleCell" "(" K ")" [function, projection]
+  syntax OracleCell ::= "initOracleCell" [function, initializer, noThread]
+  syntax OracleCell ::= "<Oracle>" Map "</Oracle>" [cell, cellName(Oracle), format(%1%i%n%2%d%n%3), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  syntax KItem ::= VaultCellOpt
+  syntax KItem ::= VaultCell
+  syntax KItem ::= SCellOpt
+  syntax KItem ::= SCell
+  syntax KItem ::= OracleCellOpt
+  syntax KItem ::= OracleCell
+  syntax KItem ::= KCellOpt
+  syntax KItem ::= KCell
+  syntax KItem ::= GeneratedTopCellFragment
+  syntax KItem ::= GeneratedTopCell
+  syntax KItem ::= CFactorCellOpt
+  syntax KItem ::= CFactorCell
+  syntax KItem ::= BCellOpt
+  syntax KItem ::= BCell
+  syntax KCellOpt ::= KCell
+  syntax KCellOpt ::= "project:KCellOpt" "(" K ")" [function, projection]
+  syntax KCellOpt ::= "noKCell" [cellOptAbsent(KCell)]
+  syntax KCell ::= "project:KCell" "(" K ")" [function, projection]
+  syntax KCell ::= "initKCell" "(" Map ")" [function, initializer, noThread]
+  syntax KCell ::= "<k>" K "</k>" [cell, cellName(k), color(green), format(%1%i%n%2%d%n%3), maincell, org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  syntax K
+  syntax GeneratedTopCellFragment ::= "project:GeneratedTopCellFragment" "(" K ")" [function, projection]
+  syntax GeneratedTopCellFragment ::= "<generatedTop>-fragment" KCellOpt SCellOpt BCellOpt VaultCellOpt OracleCellOpt CFactorCellOpt "</generatedTop>-fragment" [cellFragment(GeneratedTopCell)]
+  syntax GeneratedTopCell ::= "project:GeneratedTopCell" "(" K ")" [function, projection]
+  syntax GeneratedTopCell ::= "initGeneratedTopCell" "(" Map ")" [function, initializer, noThread]
+  syntax GeneratedTopCell ::= "<generatedTop>" KCell SCell BCell VaultCell OracleCell CFactorCell "</generatedTop>" [cell, cellName(generatedTop), format(%1%i%n%2%n%3%n%4%n%5%n%6%n%7%d%n%8), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topcell]
+  syntax CFactorCellOpt ::= CFactorCell
+  syntax CFactorCellOpt ::= "project:CFactorCellOpt" "(" K ")" [function, projection]
+  syntax CFactorCellOpt ::= "noCFactorCell" [cellOptAbsent(CFactorCell)]
+  syntax CFactorCell ::= "project:CFactorCell" "(" K ")" [function, projection]
+  syntax CFactorCell ::= "initCFactorCell" [function, initializer, noThread]
+  syntax CFactorCell ::= "<CFactor>" Map "</CFactor>" [cell, cellName(CFactor), format(%1%i%n%2%d%n%3), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  syntax Bool ::= "isVaultCellOpt" "(" K ")" [function, functional, predicate(VaultCellOpt)]
+  syntax Bool ::= "isVaultCell" "(" K ")" [function, functional, predicate(VaultCell)]
+  syntax Bool ::= "isSCellOpt" "(" K ")" [function, functional, predicate(SCellOpt)]
+  syntax Bool ::= "isSCell" "(" K ")" [function, functional, predicate(SCell)]
+  syntax Bool ::= "isOracleCellOpt" "(" K ")" [function, functional, predicate(OracleCellOpt)]
+  syntax Bool ::= "isOracleCell" "(" K ")" [function, functional, predicate(OracleCell)]
+  syntax Bool ::= "isKCellOpt" "(" K ")" [function, functional, predicate(KCellOpt)]
+  syntax Bool ::= "isKCell" "(" K ")" [function, functional, predicate(KCell)]
+  syntax Bool ::= "isGeneratedTopCellFragment" "(" K ")" [function, functional, predicate(GeneratedTopCellFragment)]
+  syntax Bool ::= "isGeneratedTopCell" "(" K ")" [function, functional, predicate(GeneratedTopCell)]
+  syntax Bool ::= "isCFactorCellOpt" "(" K ")" [function, functional, predicate(CFactorCellOpt)]
+  syntax Bool ::= "isCFactorCell" "(" K ")" [function, functional, predicate(CFactorCell)]
+  syntax Bool ::= "isBCellOpt" "(" K ")" [function, functional, predicate(BCellOpt)]
+  syntax Bool ::= "isBCell" "(" K ")" [function, functional, predicate(BCell)]
+  syntax BCellOpt ::= BCell
+  syntax BCellOpt ::= "project:BCellOpt" "(" K ")" [function, projection]
+  syntax BCellOpt ::= "noBCell" [cellOptAbsent(BCell)]
+  syntax BCell ::= "project:BCell" "(" K ")" [function, projection]
+  syntax BCell ::= "initBCell" [function, initializer, noThread]
+  syntax BCell ::= "<B>" List "</B>" [cell, cellName(B), format(%1%i%n%2%d%n%3), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule initVaultCell(.KList)=>`<Vault>`(`.Map`(.KList)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(9b7ad06f5e4c34159e86dbcc062c015f58c26ade95f883739f09c875f8158246), initializer]
+  rule initSCell(.KList)=>`<S>`(`.Map`(.KList)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(18440f42ef0318d72de308998e8fcfb38c6336f19137c955a73aebc51d4f5988), initializer]
+  rule initOracleCell(.KList)=>`<Oracle>`(`.Map`(.KList)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(2b5ba29fad35e48e2222934876ba64f891e08065173444f590ecc29c3ed3a39b), initializer]
+  rule initKCell(Init)=>`<k>`(`project:Block`(`Map:lookup`(Init,#token("$PGM","KConfigVar")))) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(5b099406a23ad1650edeed30b0282ef678fa3947ed263fd50ab882d4c0ddec7b), initializer]
+  rule initGeneratedTopCell(Init)=>`<generatedTop>`(initKCell(Init),initSCell(.KList),initBCell(.KList),initVaultCell(.KList),initOracleCell(.KList),initCFactorCell(.KList)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(f8e7d3a3265ab351bc6ebd69bc67763c85224795bf487f6f6ab5b3d9ae47cd21), initializer]
+  rule initCFactorCell(.KList)=>`<CFactor>`(`.Map`(.KList)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(97836e07daa4b936e3d25fd0b192919a10623c2eee2be3cf261424fb0145f645), initializer]
+  rule initBCell(.KList)=>`<B>`(`.List`(.KList)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(a95b92754236d7647f88e35bcee07371132d592127c3c81711892ddca1b176bf), initializer]
+  rule `project:VaultCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:VaultCellOpt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:SCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:SCellOpt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:OracleCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:OracleCellOpt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KCellOpt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:GeneratedTopCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:GeneratedTopCellFragment`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:CFactorCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:CFactorCellOpt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:BCell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:BCellOpt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `<generatedTop>`(`<k>`(#KSequence(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),_DotVar1)=>#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1)),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(1f49e2c84fe3ad0c855b41bb7213cecaa299c9bdd07f34d7964c8637d0b2f171), org.kframework.attributes.Location(Location(38,10,38,119)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,_Gen0),THE_VARIABLE)),`<S>`(B=>`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int"))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires `notBool_`(`Set:in`(`_in__EXECUTION-SYNTAX`(Address,Token),keys(B))) ensures #token("true","Bool") [UNIQUE_ID(20b036ae3536c9dc471bf71772af49b620f1e4b5b7ac7511645137f33dab6f16), org.kframework.attributes.Location(Location(30,10,32,57)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,Amount),_DotVar1)=>_DotVar1),`<S>`(_Gen4=>`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2)),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires `_andBool_`(#match(_DotVar2,`_[_<-undef]`(_Gen4,`_in__EXECUTION-SYNTAX`(Address,Token))),#match(OldBalance,`Map:lookup`(_Gen4,`_in__EXECUTION-SYNTAX`(Address,Token)))) ensures #token("true","Bool") [UNIQUE_ID(3b9d58873af505f0e04a94389a74bd02159729607ec2249631c7bde46387ee3a), org.kframework.attributes.Location(Location(34,10,35,90)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`__;_EXECUTION-SYNTAX`(B,S),_DotVar1)=>#KSequence(B,#KSequence(S,_DotVar1))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(e81cc57b8e9a56015a8d9b4f409fa05d45d5f35210b33bc6722696e46d185cc6), org.kframework.attributes.Location(Location(52,10,52,53)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`_;_EXECUTION-SYNTAX`(S),_DotVar1)=>#KSequence(S,_DotVar1)),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(e88cba089ef6e87024dbced7ddd0524e53647c7413da0a362e833ca16584c32b), org.kframework.attributes.Location(Location(53,10,53,40)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(TX,_DotVar1)=>#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1)),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(dc7caf6c00e0019da6d07f64b048584da8163ed25d5b1836e8a8ca3ad3c423f9), org.kframework.attributes.Location(Location(47,10,47,52)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KRewrite(#Or(#And(#KSequence(#Or(#And(`_in_gets__EXECUTION-SYNTAX`(Address,Token,#Or(#And(_Gen0,isRule(#token("-1338777280","K"))),#And(Amount,isRule(#token("1849042245","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(`_;_EXECUTION-SYNTAX`(S),#Or(isRule(#token("-1540721713","K")))),#And(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),#Or(isRule(#token("-1475649852","K")))),#And(`__;_EXECUTION-SYNTAX`(B,S),#Or(isRule(#token("-1378298002","K")))),#And(TX,isRule(#token("-78552503","K")))),#Or(#And(_DotVar1,#Or(isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K")))),#And(THE_VARIABLE,isRule(#token("-1338777280","K"))))),#Or(isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K")))),#And(#EmptyK(.KList),#Or(isRule(#token("-842550567","K"))))),#Or(#And(#KSequence(S,_DotVar1),isRule(#token("-1540721713","K"))),#And(_DotVar1,isRule(#token("1849042245","K"))),#And(`DONE_EXECUTION-SYNTAX`(.KList),isRule(#token("-842550567","K"))),#And(#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1),isRule(#token("-78552503","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1),isRule(#token("-1475649852","K"))),#And(#KSequence(B,#KSequence(S,_DotVar1)),isRule(#token("-1378298002","K")))))),#Or(#And(`<S>`(#KRewrite(#Or(#And(_Gen4,isRule(#token("1849042245","K"))),#And(B,isRule(#token("-1338777280","K")))),#Or(#And(`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int")),isRule(#token("-1338777280","K"))),#And(`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2),isRule(#token("1849042245","K")))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K")),isRule(#token("-1475649852","K"))))),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [mainAutomaton]
+  rule `<generatedTop>`(`<k>`(#EmptyK(.KList)=>`DONE_EXECUTION-SYNTAX`(.KList)),THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d3a13180b0a4d91e57015fd5f4fd3201b2eb6c0501b868dbb2c09d7bb5470298), org.kframework.attributes.Location(Location(57,6,57,25)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+endmodule
+
+
+module EXECUTION-SYNTAX [org.kframework.attributes.Location(Location(1,1,15,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/execution.k))]
+  imports DOMAINS-SYNTAX
+  syntax Statement ::= Executable
+  syntax Statement ::= EVMTransaction
+  syntax Statement ::= EVMAddress "in" EVMAddress "gives" Int
+  syntax Statement ::= EVMAddress "in" EVMAddress "gets" Int
+  syntax Statement ::= "project:Statement" "(" K ")" [function, projection]
+  syntax Statement ::= "FAIL"
+  syntax Statement ::= "DONE"
+  syntax KItem ::= Statement
+  syntax KItem ::= Executable
+  syntax KItem ::= EVMTransaction
+  syntax KItem ::= EVMAddress
+  syntax KItem ::= Block
+  syntax KItem ::= BalanceEntry
+  syntax K
+  syntax Executable ::= "project:Executable" "(" K ")" [function, projection]
+  syntax Executable ::= "exec(" EVMTransaction ")"
+  syntax EVMTransaction ::= EVMTransaction "fee" Int
+  syntax EVMTransaction ::= EVMTransaction "block" Int
+  syntax EVMTransaction ::= "project:EVMTransaction" "(" K ")" [function, projection]
+  syntax EVMAddress ::= Int
+  syntax EVMAddress ::= "project:EVMAddress" "(" K ")" [function, projection]
+  syntax EVMAddress ::= "ETH"
+  syntax EVMAddress ::= "Attacker"
+  syntax Bool ::= "isStatement" "(" K ")" [function, functional, predicate(Statement)]
+  syntax Bool ::= "isExecutable" "(" K ")" [function, functional, predicate(Executable)]
+  syntax Bool ::= "isEVMTransaction" "(" K ")" [function, functional, predicate(EVMTransaction)]
+  syntax Bool ::= "isEVMAddress" "(" K ")" [function, functional, predicate(EVMAddress)]
+  syntax Bool ::= "isBlock" "(" K ")" [function, functional, predicate(Block)]
+  syntax Bool ::= "isBalanceEntry" "(" K ")" [function, functional, predicate(BalanceEntry)]
+  syntax Block ::= Statement ";"
+  syntax Block ::= Block Statement ";"
+  syntax Block ::= "project:Block" "(" K ")" [function, projection]
+  syntax BalanceEntry ::= EVMAddress "in" EVMAddress
+  syntax BalanceEntry ::= "project:BalanceEntry" "(" K ")" [function, projection]
+  rule `project:Statement`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Executable`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:EVMTransaction`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:EVMAddress`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Block`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:BalanceEntry`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module FLOAT-SYNTAX [org.kframework.attributes.Location(Location(1196,1,1201,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax KItem ::= Float
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Float [hook(FLOAT.Float), org.kframework.attributes.Location(Location(1197,3,1197,35)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax Float ::= r"[\\+-]?Infinity([fFdD]|([pP][0-9]+[xX][0-9]+))?" [prec(3), token]
+  syntax Float ::= r"NaN([fFdD]|([pP][0-9]+[xX][0-9]+))?" [prec(3), token]
+  syntax Float ::= r"([\\+-]?[0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][\\+-]?[0-9]+)?([fFdD]|([pP][0-9]+[xX][0-9]+))?" [prec(1), token]
+  syntax Float ::= "project:Float" "(" K ")" [function, projection]
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isFloat" "(" K ")" [function, functional, predicate(Float)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Float`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module ID [org.kframework.attributes.Location(Location(2055,1,2058,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports ID-SYMBOLIC
+  imports ID-COMMON
+endmodule
+
+
+module ID-COMMON [org.kframework.attributes.Location(Location(2044,1,2053,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING
+  imports ID-SYNTAX
+  syntax String ::= "Id2String" "(" Id ")" [function, functional, hook(STRING.token2string), klabel(Id2String)]
+  syntax Id ::= "freshId" "(" Int ")" [freshGenerator, function, functional, klabel(freshId), private]
+  syntax Id ::= "String2Id" "(" String ")" [function, functional, hook(STRING.string2token), klabel(String2Id)]
+  rule freshId(I)=>`String2Id`(`_+String__STRING-COMMON`(#token("\"_\"","String"),`Int2String`(I))) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(b8292fe0ef07ef286396eaa7d2571097e6ced1849580385fc177a2221d5c03b6), org.kframework.attributes.Location(Location(2052,8,2052,62)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module ID-SYMBOLIC [kast, org.kframework.attributes.Location(Location(2060,1,2066,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), private, symbolic]
+  imports STRING
+  imports ID-COMMON
+  syntax KItem ::= "#parseIdToken" "(" String "," String ")" [function, hook(STRING.parseToken)]
+  rule `String2Id`(S)=>`project:Id`(`#parseIdToken(_,_)_ID-SYMBOLIC`(#token("\"Id\"","String"),S)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(8956c19b30279d35624c4aef2fb58845fa67a9f84142764d352181d053abe97b), org.kframework.attributes.Location(Location(2065,8,2065,59)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module ID-SYNTAX [org.kframework.attributes.Location(Location(2040,1,2042,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax KItem ::= Id
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Id [org.kframework.attributes.Location(Location(2041,3,2041,20)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), token]
+  syntax Id ::= "project:Id" "(" K ")" [function, projection]
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isId" "(" K ")" [function, functional, predicate(Id)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Id`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module ID-SYNTAX-PROGRAM-PARSING [org.kframework.attributes.Location(Location(2033,1,2038,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports BUILTIN-ID-TOKENS
+  syntax KItem ::= Id
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K
+  syntax Id ::= r"(?<![A-Za-z0-9\\_])[A-Za-z\\_][A-Za-z0-9\\_]*" [prec(1), token]
+  syntax Id ::= #UpperId [token]
+  syntax Id ::= #LowerId [token]
+  syntax Id ::= "project:Id" "(" K ")" [function, projection]
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isId" "(" K ")" [function, functional, predicate(Id)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Id`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module INT [org.kframework.attributes.Location(Location(1133,1,1161,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports K-EQUAL
+  imports INT-SYMBOLIC
+  imports INT-KAST
+  imports INT-COMMON
+  imports BOOL
+  syntax Int ::= "freshInt" "(" Int ")" [freshGenerator, function, functional, klabel(freshInt), private]
+  rule signExtendBitRangeInt(I,IDX,LEN)=>`_-Int_`(`_modInt_`(`_+Int_`(bitRangeInt(I,IDX,LEN),`_<<Int_`(#token("1","Int"),`_-Int_`(LEN,#token("1","Int")))),`_<<Int_`(#token("1","Int"),LEN)),`_<<Int_`(#token("1","Int"),`_-Int_`(LEN,#token("1","Int")))) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d858dd7024cc94ec84ffa0439c1065329632f9b23a9af54700408056488c745f), org.kframework.attributes.Location(Location(1143,8,1143,164)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule freshInt(I)=>I requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(437d9c68d970fe8d86a6232428c8d19d91f3d88e8d40256abbac398c0c5a0d3e), org.kframework.attributes.Location(Location(1160,8,1160,28)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule bitRangeInt(I,IDX,LEN)=>`_modInt_`(`_>>Int_`(I,IDX),`_<<Int_`(#token("1","Int"),LEN)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(65c8c75fc9c37f1c0464398e4efbac63759cde8e020152beed89774b7d5114b3), org.kframework.attributes.Location(Location(1141,8,1141,85)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `minInt(_,_)_INT-COMMON`(I1,I2)=>I2 requires `_>=Int_`(I1,I2) ensures #token("true","Bool") [UNIQUE_ID(bb3e55be0763d771ec4221b4eccc3ceb30c1f94d84e70935c1ea8451b8032c9c), org.kframework.attributes.Location(Location(1154,8,1154,57)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `minInt(_,_)_INT-COMMON`(I1,I2)=>I1 requires `_<=Int_`(I1,I2) ensures #token("true","Bool") [UNIQUE_ID(b389edf323180a420fd0b3b6f1fcb6b0404b627187ee4c3af637b31303e3311c), org.kframework.attributes.Location(Location(1153,8,1153,57)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `_modInt_`(I1,I2)=>`_%Int_`(`_+Int_`(`_%Int_`(I1,absInt(I2)),absInt(I2)),absInt(I2)) requires `_=/=Int_`(I2,#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(12f49a1f7bb2c388f3996f445620914e67657f96692738d903d354f086fda57d), concrete, org.kframework.attributes.Location(Location(1148,5,1151,23)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]), simplification]
+  rule `_dividesInt__INT-COMMON`(I1,I2)=>`_==Int_`(`_%Int_`(I2,I1),#token("0","Int")) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(73baeb02eb0359fd8c61153946fd54e02a2c5158d8a5813cad8c3131eaf50995), org.kframework.attributes.Location(Location(1157,8,1157,58)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_divInt_`(I1,I2)=>`_/Int_`(`_-Int_`(I1,`_modInt_`(I1,I2)),I2) requires `_=/=Int_`(I2,#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(83dcf9bc8c69f131715bc7a92d06c99b9a2b5f4c4fdafb69e6fdb2f1822712d4), org.kframework.attributes.Location(Location(1145,8,1146,23)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `_=/=Int_`(I1,I2)=>`notBool_`(`_==Int_`(I1,I2)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(4de6e05b11cdbed7ef5cb4c952127924661af4744c1e495370e1c8a962ba7be3), org.kframework.attributes.Location(Location(1156,8,1156,53)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module INT-COMMON [org.kframework.attributes.Location(Location(914,1,1057,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports INT-SYNTAX
+  imports BOOL
+  syntax priority ~Int_ > _^Int_ _^%Int__ > _divInt_ _%Int_ _/Int_ _*Int_ _modInt_ > _+Int_ _-Int_ > _>>Int_ _<<Int_ > _&Int_ > _xorInt_ > _|Int_
+  syntax associativity left _|Int_
+  syntax associativity left _xorInt_
+  syntax associativity left _modInt_
+  syntax associativity left _divInt_ _%Int_ _/Int_ _*Int_ _modInt_
+  syntax associativity left _divInt_
+  syntax associativity left _^Int_ _^%Int__
+  syntax associativity left _^Int_
+  syntax associativity left _^%Int__
+  syntax associativity left _>Int_
+  syntax associativity left _>>Int_ _<<Int_
+  syntax associativity left _>>Int_
+  syntax associativity left _>=Int_
+  syntax associativity left _==Int_
+  syntax associativity left _=/=Int_
+  syntax associativity left _<Int_
+  syntax associativity left _<=Int_
+  syntax associativity left _<<Int_
+  syntax associativity left _/Int_
+  syntax associativity left _-Int_
+  syntax associativity left _+Int_ _-Int_
+  syntax associativity left _+Int_
+  syntax associativity left _*Int_
+  syntax associativity left _&Int_
+  syntax associativity left _%Int_
+  syntax K ::= "srandInt" "(" Int ")" [function, hook(INT.srand), impure, klabel(srandInt)]
+  syntax Int ::= Int "|Int" Int [function, functional, hook(INT.or), klabel(_|Int_), latex({#1}\mathrel{|_{\scriptstyle\it Int}}{#2}), left, smtlib(orInt), symbol]
+  syntax Int ::= Int "xorInt" Int [function, functional, hook(INT.xor), klabel(_xorInt_), latex({#1}\mathrel{\oplus_{\scriptstyle\it Int}}{#2}), left, smtlib(xorInt), symbol]
+  syntax Int ::= Int "modInt" Int [function, hook(INT.emod), klabel(_modInt_), left, smt-hook(mod), symbol]
+  syntax Int ::= Int "divInt" Int [function, hook(INT.ediv), klabel(_divInt_), left, smt-hook(div), symbol]
+  syntax Int ::= Int "^Int" Int [function, hook(INT.pow), klabel(_^Int_), latex({#1}\mathrel{{\char`\^}_{\!\scriptstyle\it Int}}{#2}), left, smt-hook(^), symbol]
+  syntax Int ::= Int "^%Int" Int Int [function, hook(INT.powmod), klabel(_^%Int__), left, smt-hook((mod (^ #1 #2) #3)), symbol]
+  syntax Int ::= Int ">>Int" Int [function, hook(INT.shr), klabel(_>>Int_), latex({#1}\mathrel{\gg_{\scriptstyle\it Int}}{#2}), left, smtlib(shrInt), symbol]
+  syntax Int ::= Int "<<Int" Int [function, hook(INT.shl), klabel(_<<Int_), latex({#1}\mathrel{\ll_{\scriptstyle\it Int}}{#2}), left, smtlib(shlInt), symbol]
+  syntax Int ::= Int "/Int" Int [function, hook(INT.tdiv), klabel(_/Int_), latex({#1}\mathrel{\div_{\scriptstyle\it Int}}{#2}), left, smt-hook(div), symbol]
+  syntax Int ::= Int "-Int" Int [function, functional, hook(INT.sub), klabel(_-Int_), latex({#1}\mathrel{-_{\scriptstyle\it Int}}{#2}), left, smt-hook(-), symbol]
+  syntax Int ::= Int "+Int" Int [function, functional, hook(INT.add), klabel(_+Int_), latex({#1}\mathrel{+_{\scriptstyle\it Int}}{#2}), left, smt-hook(+), symbol]
+  syntax Int ::= Int "*Int" Int [function, functional, hook(INT.mul), klabel(_*Int_), latex({#1}\mathrel{\ast_{\scriptstyle\it Int}}{#2}), left, smt-hook(*), symbol]
+  syntax Int ::= Int "&Int" Int [function, functional, hook(INT.and), klabel(_&Int_), latex({#1}\mathrel{\&_{\scriptstyle\it Int}}{#2}), left, smtlib(andInt), symbol]
+  syntax Int ::= Int "%Int" Int [function, hook(INT.tmod), klabel(_%Int_), latex({#1}\mathrel{\%_{\scriptstyle\it Int}}{#2}), left, smt-hook(mod), symbol]
+  syntax Int ::= "~Int" Int [function, functional, hook(INT.not), klabel(~Int_), latex(\mathop{\sim_{\scriptstyle\it Int}}{#1}), smtlib(notInt), symbol]
+  syntax Int ::= "signExtendBitRangeInt" "(" Int "," Int "," Int ")" [function, hook(INT.signExtendBitRange), klabel(signExtendBitRangeInt)]
+  syntax Int ::= "randInt" "(" Int ")" [function, hook(INT.rand), impure, klabel(randInt)]
+  syntax Int ::= "minInt" "(" Int "," Int ")" [function, functional, hook(INT.min), smt-hook((ite (< #1 #2) #1 #2))]
+  syntax Int ::= "maxInt" "(" Int "," Int ")" [function, functional, hook(INT.max), smt-hook((ite (< #1 #2) #2 #1))]
+  syntax Int ::= "log2Int" "(" Int ")" [function, hook(INT.log2), klabel(log2Int)]
+  syntax Int ::= "bitRangeInt" "(" Int "," Int "," Int ")" [function, hook(INT.bitRange), klabel(bitRangeInt)]
+  syntax Int ::= "absInt" "(" Int ")" [function, functional, hook(INT.abs), klabel(absInt), smt-hook((ite (< #1 0) (- 0 #1) #1))]
+  syntax Bool ::= Int "dividesInt" Int [function]
+  syntax Bool ::= Int ">Int" Int [function, functional, hook(INT.gt), klabel(_>Int_), latex({#1}\mathrel{>_{\scriptstyle\it Int}}{#2}), left, smt-hook(>), symbol]
+  syntax Bool ::= Int ">=Int" Int [function, functional, hook(INT.ge), klabel(_>=Int_), latex({#1}\mathrel{\geq_{\scriptstyle\it Int}}{#2}), left, smt-hook(>=), symbol]
+  syntax Bool ::= Int "==Int" Int [function, functional, hook(INT.eq), klabel(_==Int_), latex({#1}\mathrel{{=}{=}_{\scriptstyle\it Int}}{#2}), left, smt-hook(=), symbol]
+  syntax Bool ::= Int "=/=Int" Int [function, functional, hook(INT.ne), klabel(_=/=Int_), latex({#1}\mathrel{{=}{/}{=}_{\scriptstyle\it Int}}{#2}), left, smt-hook(distinct), symbol]
+  syntax Bool ::= Int "<Int" Int [function, functional, hook(INT.lt), klabel(_<Int_), latex({#1}\mathrel{<_{\scriptstyle\it Int}}{#2}), left, smt-hook(<), symbol]
+  syntax Bool ::= Int "<=Int" Int [function, functional, hook(INT.le), klabel(_<=Int_), latex({#1}\mathrel{\leq_{\scriptstyle\it Int}}{#2}), left, smt-hook(<=), symbol]
+endmodule
+
+
+module INT-KAST [kast, org.kframework.attributes.Location(Location(1108,1,1114,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports K-EQUAL
+  imports INT-COMMON
+  rule `_==Int_`(I1,I2)=>`_==K_`(I1,I2) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(07c2f9d6aae03c707c0d053b86a56d020de84928e5c794dd863a33fdc95c0f67), org.kframework.attributes.Location(Location(1112,8,1112,40)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module INT-SYMBOLIC [org.kframework.attributes.Location(Location(1059,1,1076,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), symbolic]
+  imports INT-COMMON
+  imports BOOL
+  rule `_modInt_`(X,N)=>X requires `_andBool_`(`_<=Int_`(#token("0","Int"),X),`_<Int_`(X,N)) ensures #token("true","Bool") [UNIQUE_ID(3a397a001af2fcd0eaf3c29fa026cf37c07fb9b8d6245bae8906780b5e74f503), org.kframework.attributes.Location(Location(1068,8,1068,59)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]), simplification]
+  rule `_>>Int_`(X,#token("0","Int"))=>X requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(572bf49a8ddd18981c88d4573e09bebfa4ca9f0d3d1caaea04d9fa30b5d20c39), org.kframework.attributes.Location(Location(1074,8,1074,22)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), simplification]
+  rule `_>>Int_`(#token("0","Int"),_Gen0)=>#token("0","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(1cf22edfe70c5e6f01624499522c9b110616a96e9f7894de7508ebb4a51091b9), org.kframework.attributes.Location(Location(1075,8,1075,22)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), simplification]
+  rule `_<<Int_`(X,#token("0","Int"))=>X requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d9cace14bde6a604c371ca45e9ea6900a124efc18d91742ed49ef2efd97baa33), org.kframework.attributes.Location(Location(1072,8,1072,22)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), simplification]
+  rule `_<<Int_`(#token("0","Int"),_Gen0)=>#token("0","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(2d402e237d3a3b4ebf2358cc61e77cbb3ec03989d9be016003b2916d1935a8e9), org.kframework.attributes.Location(Location(1073,8,1073,22)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), simplification]
+  rule `_-Int_`(I,#token("0","Int"))=>I requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d86d26d8f81aca004f9bc8ad3e99c8c73cbf1c3dd4c60d3f44c3a524af1dff49), org.kframework.attributes.Location(Location(1066,8,1066,21)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), simplification]
+  rule `_+Int_`(I,#token("0","Int"))=>I requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d8b4ae4926d8ec7b1d5abaa5fed68fd6c7f3f5a21c76a51231394a2b36fbf995), org.kframework.attributes.Location(Location(1065,8,1065,21)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), simplification]
+  rule `_%Int_`(X,N)=>X requires `_andBool_`(`_<=Int_`(#token("0","Int"),X),`_<Int_`(X,N)) ensures #token("true","Bool") [UNIQUE_ID(3c6a6ed93c91491e78006950a229b91fe57edd207091cb418b88655e3af66f94), org.kframework.attributes.Location(Location(1069,8,1069,59)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]), simplification]
+endmodule
+
+
+module INT-SYNTAX [org.kframework.attributes.Location(Location(909,1,912,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports UNSIGNED-INT-SYNTAX
+  syntax K
+  syntax Int ::= r"[\\+-]?[0-9]+" [prec(2), prefer, token]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+endmodule
+
+
+module K [org.kframework.attributes.Location(Location(447,1,477,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-PREDICATES
+  imports REQUIRES-ENSURES
+  imports RECORD-PRODUCTIONS
+  imports KSEQ-SYMBOLIC
+  imports KREWRITE
+  imports K-SORT-LATTICE
+  imports AUTO-FOLLOW
+  imports AUTO-CASTS
+  syntax {Sort} Sort ::= Sort "#as" Sort [klabel(#KAs), symbol]
+  syntax {Sort} Sort ::= "#fun" "(" Sort ")" "(" Sort ")" [klabel(#fun2), prefer, symbol]
+  syntax {Sort1, Sort2} Sort1 ::= "#let" Sort2 "=" Sort2 "#in" Sort1 [klabel(#let), symbol]
+  syntax {Sort1, Sort2} Sort1 ::= "#fun" "(" Sort2 "=>" Sort1 ")" "(" Sort2 ")" [klabel(#fun3), symbol]
+  syntax associativity left _:=K_ _:/=K_
+  syntax Bool ::= K ":=K" K [equalEqualK, function, functional, klabel(_:=K_), symbol]
+  syntax Bool ::= K ":/=K" K [function, functional, klabel(_:/=K_), notEqualEqualK, symbol]
+endmodule
+
+
+module K-AMBIGUITIES [org.kframework.attributes.Location(Location(542,1,546,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax {Sort} Sort ::= "amb" "(" Sort "," Sort ")" [klabel(amb), symbol]
+endmodule
+
+
+module K-BOTTOM-SORT [org.kframework.attributes.Location(Location(362,1,366,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-KBOTT
+  syntax {Sort} Sort ::= KBott
+  syntax KItem ::= KBott
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module K-EQUAL [org.kframework.attributes.Location(Location(2120,1,2131,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports K-EQUAL-SYNTAX
+  imports K-EQUAL-KAST
+  imports BOOL
+  rule `_=/=K_`(K1,K2)=>`notBool_`(`_==K_`(K1,K2)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(bccaba7335e4cd77501a0667f2f7b3eb4a2105d5f60d804915dd4b1b08902c0c), org.kframework.attributes.Location(Location(2126,8,2126,45)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `#if_#then_#else_#fi_K-EQUAL-SYNTAX`(C,_Gen0,B2)=>B2 requires `notBool_`(C) ensures #token("true","Bool") [UNIQUE_ID(51dd97490e3c3323f4a6187872eed9aeee4ef614ce1e0b040301b907367171e5), org.kframework.attributes.Location(Location(2129,8,2129,67)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `#if_#then_#else_#fi_K-EQUAL-SYNTAX`(C,B1,_Gen0)=>B1 requires C ensures #token("true","Bool") [UNIQUE_ID(276c47a049ccf5b6fde1d2de4e22b92de409895ce5d899546496a65ff28e5bb2), org.kframework.attributes.Location(Location(2128,8,2128,59)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+endmodule
+
+
+module K-EQUAL-KAST [kast, org.kframework.attributes.Location(Location(2112,1,2118,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports K-EQUAL-SYNTAX
+  imports BOOL
+  rule `_==Bool_`(K1,K2)=>`_==K_`(K1,K2) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(38ffdc1e6b663e78098dbe23e48e95796e1eaea0d8c363333e68c6a642528346), org.kframework.attributes.Location(Location(2116,8,2116,43)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module K-EQUAL-SYNTAX [org.kframework.attributes.Location(Location(2082,1,2094,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports BOOL
+  imports BASIC-K
+  syntax {Sort} Sort ::= "#if" Bool "#then" Sort "#else" Sort "#fi" [function, functional, hook(KEQUAL.ite), smt-hook(ite)]
+  syntax priority _:=K_ _=/=K_ _:/=K_ _==K_ > weakAlwaysFinally #And _orElseBool_ weakExistsFinally _orBool_ #Implies _andThenBool_ _impliesBool_ #Floor #Exists #Ceil _andBool_ #Forall #Not #Or notBool_ #AG #Equals _xorBool_
+  syntax associativity left _=/=K_ _==K_
+  syntax Bool ::= K "==K" K [equalEqualK, function, functional, hook(KEQUAL.eq), klabel(_==K_), latex({#1}\mathrel{=_K}{#2}), smt-hook(=), symbol]
+  syntax Bool ::= K "=/=K" K [function, functional, hook(KEQUAL.ne), klabel(_=/=K_), latex({#1}\mathrel{\neq_K}{#2}), notEqualEqualK, smt-hook(distinct), symbol]
+endmodule
+
+
+module K-IO [org.kframework.attributes.Location(Location(2209,1,2489,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING
+  imports LIST
+  imports INT
+  syntax String ::= "path" "(" IOFile ")" [function]
+  syntax Stream ::= "project:Stream" "(" K ")" [function, projection]
+  syntax Stream ::= "#parseInput" "(" String "," String ")" [klabel(#parseInput)]
+  syntax Stream ::= "#ostream" "(" Int ")" [klabel(#ostream)]
+  syntax Stream ::= "#istream" "(" Int ")" [klabel(#istream)]
+  syntax Stream ::= "#buffer" "(" K ")" [klabel(#buffer)]
+  syntax KItem ::= Stream
+  syntax KItem ::= IOString
+  syntax KItem ::= IOInt
+  syntax KItem ::= IOFile
+  syntax KItem ::= IOError
+  syntax KItem ::= "#systemResult" "(" Int "," String "," String ")" [klabel(#systemResult), symbol]
+  syntax KItem ::= "#system" "(" String ")" [function, hook(IO.system), impure, klabel(#system)]
+  syntax K ::= "#write" "(" Int "," String ")" [function, hook(IO.write), impure]
+  syntax K ::= "#unlock" "(" Int "," Int ")" [function, hook(IO.unlock), impure]
+  syntax K ::= "#traceK" "(" K ")" [function, functional, hook(IO.traceTerm), impure, klabel(#traceK), returnsUnit, symbol]
+  syntax K ::= "#trace" "(" KItem ")" [function, functional, hook(IO.traceTerm), impure, klabel(#trace), returnsUnit, symbol]
+  syntax K ::= "#shutdownWrite" "(" Int ")" [function, hook(IO.shutdownWrite), impure]
+  syntax K ::= "#seekEnd" "(" Int "," Int ")" [function, hook(IO.seekEnd), impure]
+  syntax K ::= "#seek" "(" Int "," Int ")" [function, hook(IO.seek), impure]
+  syntax K ::= "#remove" "(" String ")" [function, functional, hook(IO.remove), impure, klabel(#remove)]
+  syntax K ::= "#putc" "(" Int "," Int ")" [function, hook(IO.putc), impure]
+  syntax K ::= "#logToFile" "(" String "," String ")" [function, functional, hook(IO.log), impure, klabel(#logToFile), returnsUnit, symbol]
+  syntax K ::= "#lock" "(" Int "," Int ")" [function, hook(IO.lock), impure]
+  syntax K ::= "#close" "(" Int ")" [function, hook(IO.close), impure]
+  syntax K
+  syntax Int ::= "fd" "(" IOFile ")" [function]
+  syntax Int ::= "errno" "(" IOError ")" [function]
+  syntax Int ::= "#time" "(" ")" [function, hook(IO.time), impure]
+  syntax Int ::= "#stdout" [function, functional]
+  syntax Int ::= "#stdin" [function, functional]
+  syntax Int ::= "#stderr" [function, functional]
+  syntax IOString ::= String
+  syntax IOString ::= IOError
+  syntax IOString ::= "project:IOString" "(" K ")" [function, projection]
+  syntax IOString ::= "#read" "(" Int "," Int ")" [function, hook(IO.read), impure]
+  syntax IOInt ::= Int
+  syntax IOInt ::= IOError
+  syntax IOInt ::= "project:IOInt" "(" K ")" [function, projection]
+  syntax IOInt ::= "#tell" "(" Int ")" [function, hook(IO.tell), impure]
+  syntax IOInt ::= "#open" "(" String "," String ")" [function, hook(IO.open), impure]
+  syntax IOInt ::= "#open" "(" String ")" [function]
+  syntax IOInt ::= "#getc" "(" Int ")" [function, hook(IO.getc), impure]
+  syntax IOInt ::= "#accept" "(" Int ")" [function, hook(IO.accept), impure]
+  syntax IOFile ::= IOError
+  syntax IOFile ::= "project:IOFile" "(" K ")" [function, projection]
+  syntax IOFile ::= "#tempFile" "(" String "," Int ")" [klabel(#tempFile), symbol]
+  syntax IOFile ::= "#mkstemp" "(" String ")" [function, hook(IO.mkstemp), impure, klabel(#mkstemp)]
+  syntax IOError ::= "project:IOError" "(" K ")" [function, projection]
+  syntax IOError ::= "#unknownIOError" "(" Int ")" [klabel(#unknownIOError), symbol]
+  syntax IOError ::= "#EXDEV" [klabel(#EXDEV), symbol]
+  syntax IOError ::= "#EWOULDBLOCK" [klabel(#EWOULDBLOCK), symbol]
+  syntax IOError ::= "#ETOOMANYREFS" [klabel(#ETOOMANYREFS), symbol]
+  syntax IOError ::= "#ETIMEDOUT" [klabel(#ETIMEDOUT), symbol]
+  syntax IOError ::= "#ESRCH" [klabel(#ESRCH), symbol]
+  syntax IOError ::= "#ESPIPE" [klabel(#ESPIPE), symbol]
+  syntax IOError ::= "#ESOCKTNOSUPPORT" [klabel(#ESOCKTNOSUPPORT), symbol]
+  syntax IOError ::= "#ESHUTDOWN" [klabel(#ESHUTDOWN), symbol]
+  syntax IOError ::= "#EROFS" [klabel(#EROFS), symbol]
+  syntax IOError ::= "#ERANGE" [klabel(#ERANGE), symbol]
+  syntax IOError ::= "#EPROTOTYPE" [klabel(#EPROTOTYPE), symbol]
+  syntax IOError ::= "#EPROTONOSUPPORT" [klabel(#EPROTONOSUPPORT), symbol]
+  syntax IOError ::= "#EPIPE" [klabel(#EPIPE), symbol]
+  syntax IOError ::= "#EPFNOSUPPORT" [klabel(#EPFNOSUPPORT), symbol]
+  syntax IOError ::= "#EPERM" [klabel(#EPERM), symbol]
+  syntax IOError ::= "#EOVERFLOW" [klabel(#EOVERFLOW), symbol]
+  syntax IOError ::= "#EOPNOTSUPP" [klabel(#EOPNOTSUPP), symbol]
+  syntax IOError ::= "#EOF" [klabel(#EOF), symbol]
+  syntax IOError ::= "#ENXIO" [klabel(#ENXIO), symbol]
+  syntax IOError ::= "#ENOTTY" [klabel(#ENOTTY), symbol]
+  syntax IOError ::= "#ENOTSOCK" [klabel(#ENOTSOCK), symbol]
+  syntax IOError ::= "#ENOTEMPTY" [klabel(#ENOTEMPTY), symbol]
+  syntax IOError ::= "#ENOTDIR" [klabel(#ENOTDIR), symbol]
+  syntax IOError ::= "#ENOTCONN" [klabel(#ENOTCONN), symbol]
+  syntax IOError ::= "#ENOSYS" [klabel(#ENOSYS), symbol]
+  syntax IOError ::= "#ENOSPC" [klabel(#ENOSPC), symbol]
+  syntax IOError ::= "#ENOPROTOOPT" [klabel(#ENOPROTOOPT), symbol]
+  syntax IOError ::= "#ENOMEM" [klabel(#ENOMEM), symbol]
+  syntax IOError ::= "#ENOLCK" [klabel(#ENOLCK), symbol]
+  syntax IOError ::= "#ENOEXEC" [klabel(#ENOEXEC), symbol]
+  syntax IOError ::= "#ENOENT" [klabel(#ENOENT), symbol]
+  syntax IOError ::= "#ENODEV" [klabel(#ENODEV), symbol]
+  syntax IOError ::= "#ENOBUFS" [klabel(#ENOBUFS), symbol]
+  syntax IOError ::= "#ENFILE" [klabel(#ENFILE), symbol]
+  syntax IOError ::= "#ENETUNREACH" [klabel(#ENETUNREACH), symbol]
+  syntax IOError ::= "#ENETRESET" [klabel(#ENETRESET), symbol]
+  syntax IOError ::= "#ENETDOWN" [klabel(#ENETDOWN), symbol]
+  syntax IOError ::= "#ENAMETOOLONG" [klabel(#ENAMETOOLONG), symbol]
+  syntax IOError ::= "#EMSGSIZE" [klabel(#EMSGSIZE), symbol]
+  syntax IOError ::= "#EMLINK" [klabel(#EMLINK), symbol]
+  syntax IOError ::= "#EMFILE" [klabel(#EMFILE), symbol]
+  syntax IOError ::= "#ELOOP" [klabel(#ELOOP), symbol]
+  syntax IOError ::= "#EISDIR" [klabel(#EISDIR), symbol]
+  syntax IOError ::= "#EISCONN" [klabel(#EISCONN), symbol]
+  syntax IOError ::= "#EIO" [klabel(#EIO), symbol]
+  syntax IOError ::= "#EINVAL" [klabel(#EINVAL), symbol]
+  syntax IOError ::= "#EINTR" [klabel(#EINTR), symbol]
+  syntax IOError ::= "#EINPROGRESS" [klabel(#EINPROGRESS), symbol]
+  syntax IOError ::= "#EHOSTUNREACH" [klabel(#EHOSTUNREACH), symbol]
+  syntax IOError ::= "#EHOSTDOWN" [klabel(#EHOSTDOWN), symbol]
+  syntax IOError ::= "#EFBIG" [klabel(#EFBIG), symbol]
+  syntax IOError ::= "#EFAULT" [klabel(#EFAULT), symbol]
+  syntax IOError ::= "#EEXIST" [klabel(#EEXIST), symbol]
+  syntax IOError ::= "#EDOM" [klabel(#EDOM), symbol]
+  syntax IOError ::= "#EDESTADDRREQ" [klabel(#EDESTADDRREQ), symbol]
+  syntax IOError ::= "#EDEADLK" [klabel(#EDEADLK), symbol]
+  syntax IOError ::= "#ECONNRESET" [klabel(#ECONNRESET), symbol]
+  syntax IOError ::= "#ECONNREFUSED" [klabel(#ECONNREFUSED), symbol]
+  syntax IOError ::= "#ECONNABORTED" [klabel(#ECONNABORTED), symbol]
+  syntax IOError ::= "#ECHILD" [klabel(#ECHILD), symbol]
+  syntax IOError ::= "#EBUSY" [klabel(#EBUSY), symbol]
+  syntax IOError ::= "#EBADF" [klabel(#EBADF), symbol]
+  syntax IOError ::= "#EALREADY" [klabel(#EALREADY), symbol]
+  syntax IOError ::= "#EAGAIN" [klabel(#EAGAIN), symbol]
+  syntax IOError ::= "#EAFNOSUPPORT" [klabel(#EAFNOSUPPORT), symbol]
+  syntax IOError ::= "#EADDRNOTAVAIL" [klabel(#EADDRNOTAVAIL), symbol]
+  syntax IOError ::= "#EADDRINUSE" [klabel(#EADDRINUSE), symbol]
+  syntax IOError ::= "#EACCES" [klabel(#EACCES), symbol]
+  syntax IOError ::= "#E2BIG" [klabel(#E2BIG), symbol]
+  syntax Bool ::= "isStream" "(" K ")" [function, functional, predicate(Stream)]
+  syntax Bool ::= "isIOString" "(" K ")" [function, functional, predicate(IOString)]
+  syntax Bool ::= "isIOInt" "(" K ")" [function, functional, predicate(IOInt)]
+  syntax Bool ::= "isIOFile" "(" K ")" [function, functional, predicate(IOFile)]
+  syntax Bool ::= "isIOError" "(" K ")" [function, functional, predicate(IOError)]
+  rule `project:Stream`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:IOString`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:IOInt`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:IOFile`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:IOError`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:#unknownIOError:errno`(#unknownIOError(K0))=>K0 requires #token("true","Bool") ensures #token("true","Bool") 
+  rule `project:#tempFile:path`(#tempFile(K0,K1))=>K0 requires #token("true","Bool") ensures #token("true","Bool") 
+  rule `project:#tempFile:fd`(#tempFile(K0,K1))=>K1 requires #token("true","Bool") ensures #token("true","Bool") 
+  rule `#stdout_K-IO`(.KList)=>#token("1","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(110015b5328a79e45c802b941da53e22ad2f386915873177aa4edf995448ab44), org.kframework.attributes.Location(Location(2413,8,2413,20)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `#stdin_K-IO`(.KList)=>#token("0","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(7a806e96b09f583ac1db69c436fb5a69eab2ba971c738167615ee1ffbf99f756), org.kframework.attributes.Location(Location(2412,8,2412,19)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `#stderr_K-IO`(.KList)=>#token("2","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(a0f3af2e9d47793081b937eab153af705b44e64f7d1a4fa05b47309a5a0a5362), org.kframework.attributes.Location(Location(2414,8,2414,20)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `#open(_)_K-IO`(S)=>`#open(_,_)_K-IO`(S,#token("\"r+\"","String")) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(e13ea6d0cba375629cce9e8bf52709bdb758003a3075bad6315acd5d0c91c278), org.kframework.attributes.Location(Location(2317,8,2317,48)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module K-LOCATIONS [org.kframework.attributes.Location(Location(559,1,566,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports STRING-SYNTAX
+  imports INT-SYNTAX
+  syntax {Sort} Sort ::= "#location" "(" Sort "," String "," Int "," Int "," Int "," Int ")" [format(%3), klabel(#location), symbol]
+endmodule
+
+
+module K-REFLECTION [org.kframework.attributes.Location(Location(2152,1,2176,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING
+  imports K-REFLECTION-SYMBOLIC
+  imports BASIC-K
+  syntax {Sort} String ::= "#unparseKORE" "(" Sort ")" [function, hook(KREFLECTION.printKORE), klabel(#unparseKORE)]
+  syntax {Sort} Sort ::= "#parseKORE" "(" String ")" [function, hook(KREFLECTION.parseKORE), klabel(#parseKORE)]
+  syntax {Sort} Sort ::= "#parseKAST" "(" String ")" [function, hook(KREFLECTION.parseKAST), klabel(#parseKAST)]
+  syntax String ::= "#sort" "(" K ")" [function, hook(KREFLECTION.sort), klabel(#sort)]
+  syntax String ::= "#kompiledDirectory" "(" ")" [function, hook(KREFLECTION.kompiledDir), klabel(#kompiledDirectory)]
+  syntax List ::= "project:List" "(" K ")" [function, projection]
+  syntax List ::= "#argv" "(" ")" [function, hook(KREFLECTION.argv), klabel(#argv)]
+  syntax KItem ::= List
+  syntax KItem ::= IOError
+  syntax KItem ::= "getKLabel" "(" K ")" [function, hook(KREFLECTION.getKLabel), klabel(getKLabel)]
+  syntax KItem ::= "#fresh" "(" String ")" [function, hook(KREFLECTION.fresh), impure, klabel(#fresh)]
+  syntax K ::= "#getenv" "(" String ")" [function, hook(KREFLECTION.getenv), impure, klabel(#getenv)]
+  syntax K ::= "#configuration" [function, hook(KREFLECTION.configuration), impure]
+  syntax K
+  syntax IOError ::= "project:IOError" "(" K ")" [function, projection]
+  syntax IOError ::= "#noParse" "(" String ")" [klabel(#noParse), symbol]
+  syntax Bool ::= "isList" "(" K ")" [function, functional, predicate(List)]
+  syntax Bool ::= "isIOError" "(" K ")" [function, functional, predicate(IOError)]
+  rule `project:List`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:IOError`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module K-REFLECTION-SYMBOLIC [kast, org.kframework.attributes.Location(Location(2178,1,2188,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), symbolic]
+  imports STRING
+  imports BASIC-K
+  syntax String ::= "#getKLabelString" "(" K ")" [function, hook(KREFLECTION.getKLabelString), klabel(#getKLabelString)]
+  syntax Bool ::= "#isVariable" "(" K ")" [function, hook(KREFLECTION.isVariable), klabel(#isVariable)]
+  syntax Bool ::= "#isConcrete" "(" K ")" [function, hook(KREFLECTION.isConcrete), klabel(#isConcrete)]
+endmodule
+
+
+module K-SORT-LATTICE [org.kframework.attributes.Location(Location(368,1,371,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports K-TOP-SORT
+  imports K-BOTTOM-SORT
+endmodule
+
+
+module K-TERM [org.kframework.attributes.Location(Location(480,1,488,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-PREDICATES
+  imports RECORD-PRODUCTIONS
+  imports KSEQ-SYMBOLIC
+  imports KREWRITE
+  imports K-SORT-LATTICE
+  imports AUTO-FOLLOW
+  imports AUTO-CASTS
+endmodule
+
+
+module K-TOP-SORT [org.kframework.attributes.Location(Location(356,1,360,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-KBOTT
+  syntax {Sort} KItem ::= Sort
+  syntax KItem ::= KBott
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module KAST [org.kframework.attributes.Location(Location(72,1,92,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-KBOTT
+  imports KSTRING
+  imports BUILTIN-ID-TOKENS
+  imports BASIC-K
+  syntax associativity left #KList
+  syntax KList ::= KList "," KList [assoc, klabel(#KList), left, prefer, symbol, unit(#EmptyKList)]
+  syntax KList ::= K
+  syntax KList ::= ".KList" [klabel(#EmptyKList), symbol]
+  syntax KList ::= ".::KList" [klabel(#EmptyKList), symbol]
+  syntax KLabel ::= r"`(\\\\`|\\\\\\\\|[^`\\\\\\n\\r])+`" [token]
+  syntax KLabel ::= r"(?<![a-zA-Z0-9])[#a-z][a-zA-Z0-9]*" [prec(1), token]
+  syntax KLabel ::= #LowerId [token]
+  syntax KItem ::= KBott
+  syntax KBott ::= KLabel "(" KList ")" [klabel(#KApply), symbol]
+  syntax KBott ::= "#token" "(" KString "," KString ")" [klabel(#KToken), symbol]
+  syntax KBott ::= "#klabel" "(" KLabel ")" [klabel(#WrappedKLabel), symbol]
+  syntax K
+  syntax Bool ::= "isKList" "(" K ")" [function, functional, predicate(KList)]
+  syntax Bool ::= "isKLabel" "(" K ")" [function, functional, predicate(KLabel)]
+endmodule
+
+
+module KCELLS [org.kframework.attributes.Location(Location(240,1,253,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports KAST
+  syntax associativity non-assoc #withConfig [org.kframework.attributes.Location(Location(251,3,251,31)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax associativity left #cells
+  syntax KItem ::= Cell
+  syntax KItem ::= Bag
+  syntax K
+  syntax Cell [org.kframework.attributes.Location(Location(243,3,243,14)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax Cell ::= "project:Cell" "(" K ")" [function, projection]
+  syntax Bool ::= "isCell" "(" K ")" [function, functional, predicate(Cell)]
+  syntax Bool ::= "isBag" "(" K ")" [function, functional, predicate(Bag)]
+  syntax Bool ::= "is#RuleBody" "(" K ")" [function, functional, predicate(#RuleBody)]
+  syntax Bag ::= KBott
+  syntax Bag ::= Cell
+  syntax Bag ::= Bag Bag [assoc, klabel(#cells), left, symbol, unit(#cells)]
+  syntax Bag ::= "project:Bag" "(" K ")" [function, projection]
+  syntax Bag ::= ".Bag" [klabel(#cells), symbol]
+  syntax Bag ::= ".::Bag" [klabel(#cells), symbol]
+  syntax Bag ::= "(" Bag ")" [bracket, bracketLabel((_)_KCELLS)]
+  syntax #RuleBody ::= "[" "[" K "]" "]" Bag [avoid, klabel(#withConfig), symbol]
+  rule `project:Cell`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bag`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module KREWRITE [org.kframework.attributes.Location(Location(440,1,444,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax {Sort} Sort ::= Sort "=>" Sort [klabel(#KRewrite), symbol]
+  syntax priority #KRewrite > #withConfig
+  syntax associativity non-assoc #KRewrite [org.kframework.attributes.Location(Location(442,3,442,29)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+endmodule
+
+
+module KSEQ [org.kframework.attributes.Location(Location(96,1,105,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports KAST
+  imports K-TOP-SORT
+  syntax {Sort} Sort ::= "(" Sort ")" [applyPriority(1), bracket, bracketLabel((_)_KSEQ{Sort}), defaultBracket]
+  syntax associativity left #KSequence [org.kframework.attributes.Location(Location(103,3,103,25)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax associativity left #KSequence
+  syntax K ::= K "~>" K [assoc, klabel(#KSequence), left, symbol, unit(#EmptyK)]
+  syntax K ::= ".K" [klabel(#EmptyK), symbol, unparseAvoid]
+  syntax K ::= ".::K" [klabel(#EmptyK), symbol, unparseAvoid]
+  syntax K ::= "." [klabel(#EmptyK), symbol]
+endmodule
+
+
+module KSEQ-SYMBOLIC [org.kframework.attributes.Location(Location(205,1,216,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports ML-SYNTAX
+  imports KVARIABLE-SYNTAX
+  imports KSEQ
+  syntax KLabel ::= #KVariable
+  syntax KConfigVar ::= r"(?<![A-Za-z0-9_\\$!\\?@])(\\$)([A-Z][A-Za-z0-9'_]*)" [token]
+  syntax KBott ::= KConfigVar
+  syntax KBott ::= #KVariable
+  syntax #KVariable ::= r"(?<![A-Za-z0-9_\\$!\\?@])(\\!|\\?|@)?([A-Z][A-Za-z0-9'_]*|_|_[A-Z][A-Za-z0-9'_]*)" [prec(1), token]
+  syntax #KVariable ::= #UpperId [token]
+endmodule
+
+
+module KSTRING [org.kframework.attributes.Location(Location(57,1,60,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax KString ::= r"[\\\"](([^\\\"\\n\\r\\\\])|([\\\\][nrtf\\\"\\\\])|([\\\\][x][0-9a-fA-F]{2})|([\\\\][u][0-9a-fA-F]{4})|([\\\\][U][0-9a-fA-F]{8}))*[\\\"]" [token]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isKString" "(" K ")" [function, functional, predicate(KString)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module KVARIABLE-SYNTAX [org.kframework.attributes.Location(Location(200,1,202,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  syntax Bool ::= "is#KVariable" "(" K ")" [function, functional, predicate(#KVariable)]
+  syntax #KVariable [org.kframework.attributes.Location(Location(201,3,201,20)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module LANGUAGE-PARSING
+  imports TOOL-SYNTAX
+  imports TOOL
+  imports K-TERM
+  imports ID-SYNTAX-PROGRAM-PARSING
+  rule `<generatedTop>`(`<k>`(#KRewrite(#Or(#And(#KSequence(#Or(#And(`_;_EXECUTION-SYNTAX`(S),#Or(isRule(#token("-1540721713","K")))),#And(`_in_gets__EXECUTION-SYNTAX`(Address,Token,#Or(#And(_Gen0,isRule(#token("-1338777280","K"))),#And(Amount,isRule(#token("1849042245","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),#Or(isRule(#token("-1475649852","K")))),#And(`exec(_)_EXECUTION-SYNTAX`(#Or(#And(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault),#Or(isRule(#token("-349324124","K")))),#And(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token),#Or(isRule(#token("289552968","K")))),#And(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut),#Or(isRule(#token("-1451647566","K")))),#And(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price),#Or(isRule(#token("146435590","K")))),#And(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token),#Or(isRule(#token("569059051","K")))),#And(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault),#Or(isRule(#token("-944044967","K")))),#And(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut),#Or(isRule(#token("-717109357","K")))))),#Or(isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-944044967","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-349324124","K")),isRule(#token("-717109357","K")))),#And(`__;_EXECUTION-SYNTAX`(B,S),#Or(isRule(#token("-1378298002","K")))),#And(TX,isRule(#token("-78552503","K")))),#Or(#And(_DotVar1,#Or(isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-349324124","K")),isRule(#token("-717109357","K")),isRule(#token("-1475649852","K")))),#And(THE_VARIABLE,isRule(#token("-1338777280","K"))))),#Or(isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-349324124","K")),isRule(#token("-717109357","K")),isRule(#token("-1475649852","K")))),#And(#EmptyK(.KList),#Or(isRule(#token("-842550567","K"))))),#Or(#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,TokenAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),ETHAmount),_DotVar1)),isRule(#token("569059051","K"))),#And(#KSequence(S,_DotVar1),isRule(#token("-1540721713","K"))),#And(_DotVar1,isRule(#token("1849042245","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gives__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1)),isRule(#token("-944044967","K"))),#And(`DONE_EXECUTION-SYNTAX`(.KList),isRule(#token("-842550567","K"))),#And(#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1),isRule(#token("-78552503","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1),isRule(#token("-1475649852","K"))),#And(#KSequence(`_in_gives__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1)),isRule(#token("-349324124","K"))),#And(_DotVar1,isRule(#token("146435590","K"))),#And(#KSequence(B,#KSequence(S,_DotVar1)),isRule(#token("-1378298002","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int")))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int"))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),TradeAmount)),_DotVar1)))),isRule(#token("-1451647566","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),TradeAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount)))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount))))),_DotVar1)))),isRule(#token("-717109357","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,`_-Int_`(#token("0","Int"),TokenAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),`_-Int_`(#token("0","Int"),ETHAmount)),_DotVar1)),isRule(#token("289552968","K")))))),#Or(#And(`<S>`(#KRewrite(#Or(#And(_Gen3,#Or(isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))),#And(_Gen4,isRule(#token("1849042245","K"))),#And(B,isRule(#token("-1338777280","K")))),#Or(#And(`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int")),isRule(#token("-1338777280","K"))),#And(`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2),isRule(#token("1849042245","K")))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-717109357","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-349324124","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<B>`(#KRewrite(`_List_`(#Or(#And(_DotVar2,#Or(isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-944044967","K")),isRule(#token("289552968","K")),isRule(#token("-349324124","K")))),#And(_DotVar3,#Or(isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))))),#Or(#And(`_List_`(_DotVar3,`ListItem`(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut))),isRule(#token("-717109357","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token))),isRule(#token("569059051","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token))),isRule(#token("289552968","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault))),isRule(#token("-349324124","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault))),isRule(#token("-944044967","K"))),#And(`_List_`(_DotVar3,`ListItem`(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut))),isRule(#token("-1451647566","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price))),isRule(#token("146435590","K")))))),#Or(isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-944044967","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-349324124","K")),isRule(#token("-717109357","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<Vault>`(#KRewrite(#Or(#And(V,isRule(#token("-349324124","K"))),#And(_Gen4,isRule(#token("-944044967","K")))),#And(`Map:update`(V,`_in__EXECUTION-SYNTAX`(Vault,User),Amount),isRule(#token("-349324124","K"))))),#Or(isRule(#token("-944044967","K")),isRule(#token("-349324124","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-717109357","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<Oracle>`(#KRewrite(O,#And(`Map:update`(O,`_in__EXECUTION-SYNTAX`(Oracle,ERC20Token),Price),isRule(#token("146435590","K"))))),#Or(isRule(#token("146435590","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("569059051","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-349324124","K")),isRule(#token("-717109357","K")),isRule(#token("-1475649852","K"))))),THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [mainAutomaton]
+endmodule
+
+
+module LENDING [org.kframework.attributes.Location(Location(13,1,47,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/lending.k))]
+  imports ORACLE
+  imports LENDING-SYNTAX
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault)),_DotVar1)=>#KSequence(`_in_gives__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1))),THE_VARIABLE,`<B>`(`_List_`(_DotVar2)=>`_List_`(_DotVar2,`ListItem`(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault)))),`<Vault>`(V=>`Map:update`(V,`_in__EXECUTION-SYNTAX`(Vault,User),Amount)),THE_VARIABLE,THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d94854feed3e1104db16a37405bb1b9d6a96b143b75b644422e4fe32033bea20), org.kframework.attributes.Location(Location(20,5,26,77)), org.kframework.attributes.Source(Source(/root/cff/venus-model/lending.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault)),_DotVar1)=>#KSequence(`_in_gets__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gives__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1))),THE_VARIABLE,`<B>`(`_List_`(_DotVar2)=>`_List_`(_DotVar2,`ListItem`(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault)))),`<Vault>`(_Gen4),THE_VARIABLE,THE_VARIABLE) requires `_andBool_`(`_andBool_`(`_==K_`(`.Map`(.KList),`_[_<-undef]`(_Gen4,`_in__EXECUTION-SYNTAX`(Vault,User))),#match(TotalCollateralAmount,`Map:lookup`(_Gen4,`_in__EXECUTION-SYNTAX`(Vault,User)))),`_andBool_`(`_>Int_`(TotalCollateralAmount,#token("1","Int")),`_>Int_`(Amount,#token("0","Int")))) ensures #token("true","Bool") [UNIQUE_ID(b6ed43b1cef33cb2c974eb7c6f175ee6129de158c68abe1c1ea9f60bcf430365), org.kframework.attributes.Location(Location(30,6,37,69)), org.kframework.attributes.Source(Source(/root/cff/venus-model/lending.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KRewrite(#Or(#And(#KSequence(#Or(#And(`_;_EXECUTION-SYNTAX`(S),#Or(isRule(#token("-1540721713","K")))),#And(`_in_gets__EXECUTION-SYNTAX`(Address,Token,#Or(#And(_Gen0,isRule(#token("-1338777280","K"))),#And(Amount,isRule(#token("1849042245","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),#Or(isRule(#token("-1475649852","K")))),#And(`__;_EXECUTION-SYNTAX`(B,S),#Or(isRule(#token("-1378298002","K")))),#And(`exec(_)_EXECUTION-SYNTAX`(#Or(#And(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price),#Or(isRule(#token("146435590","K")))),#And(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault),#Or(isRule(#token("-944044967","K")))),#And(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault),#Or(isRule(#token("-349324124","K")))))),#Or(isRule(#token("146435590","K")),isRule(#token("-944044967","K")),isRule(#token("-349324124","K")))),#And(TX,isRule(#token("-78552503","K")))),#Or(#And(_DotVar1,#Or(isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-349324124","K")),isRule(#token("-1475649852","K")))),#And(THE_VARIABLE,isRule(#token("-1338777280","K"))))),#Or(isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-349324124","K")),isRule(#token("-1475649852","K")))),#And(#EmptyK(.KList),#Or(isRule(#token("-842550567","K"))))),#Or(#And(#KSequence(S,_DotVar1),isRule(#token("-1540721713","K"))),#And(_DotVar1,isRule(#token("1849042245","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gives__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1)),isRule(#token("-944044967","K"))),#And(`DONE_EXECUTION-SYNTAX`(.KList),isRule(#token("-842550567","K"))),#And(#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1),isRule(#token("-78552503","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1),isRule(#token("-1475649852","K"))),#And(#KSequence(`_in_gives__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1)),isRule(#token("-349324124","K"))),#And(_DotVar1,isRule(#token("146435590","K"))),#And(#KSequence(B,#KSequence(S,_DotVar1)),isRule(#token("-1378298002","K")))))),#Or(#And(`<S>`(#KRewrite(#Or(#And(_Gen4,isRule(#token("1849042245","K"))),#And(B,isRule(#token("-1338777280","K")))),#Or(#And(`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int")),isRule(#token("-1338777280","K"))),#And(`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2),isRule(#token("1849042245","K")))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-78552503","K")),isRule(#token("-349324124","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<B>`(#KRewrite(`_List_`(_DotVar2),#Or(#And(`_List_`(_DotVar2,`ListItem`(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault))),isRule(#token("-349324124","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault))),isRule(#token("-944044967","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price))),isRule(#token("146435590","K")))))),#Or(isRule(#token("146435590","K")),isRule(#token("-944044967","K")),isRule(#token("-349324124","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<Vault>`(#KRewrite(#Or(#And(V,isRule(#token("-349324124","K"))),#And(_Gen4,isRule(#token("-944044967","K")))),#And(`Map:update`(V,`_in__EXECUTION-SYNTAX`(Vault,User),Amount),isRule(#token("-349324124","K"))))),#Or(isRule(#token("-944044967","K")),isRule(#token("-349324124","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<Oracle>`(#KRewrite(O,#And(`Map:update`(O,`_in__EXECUTION-SYNTAX`(Oracle,ERC20Token),Price),isRule(#token("146435590","K"))))),#Or(isRule(#token("146435590","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-944044967","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-349324124","K")),isRule(#token("-1475649852","K"))))),THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [mainAutomaton]
+endmodule
+
+
+module LENDING-SYNTAX [org.kframework.attributes.Location(Location(3,1,11,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/lending.k))]
+  imports ORACLE-SYNTAX
+  imports EXECUTION-SYNTAX
+  syntax LENDINGTX ::= EVMAddress "open" EVMAddress "vault in" EVMAddress
+  syntax LENDINGTX ::= EVMAddress "deposits" Int EVMAddress "to" EVMAddress
+  syntax LENDINGTX ::= EVMAddress "borrows" Int EVMAddress "from" EVMAddress
+  syntax LENDINGTX ::= "project:LENDINGTX" "(" K ")" [function, projection]
+  syntax KItem ::= LENDINGTX
+  syntax K
+  syntax EVMTransaction ::= LENDINGTX
+  syntax EVMAddress ::= "Venus"
+  syntax EVMAddress ::= "LUNA"
+  syntax EVMAddress ::= "BUSD"
+  syntax Bool ::= "isLENDINGTX" "(" K ")" [function, functional, predicate(LENDINGTX)]
+  rule `project:LENDINGTX`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module LIST [org.kframework.attributes.Location(Location(625,1,740,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports INT-SYNTAX
+  imports BASIC-K
+  syntax associativity left _List_
+  syntax List [hook(LIST.List), org.kframework.attributes.Location(Location(629,3,629,32)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax List ::= List List [assoc, element(ListItem), format(%1%n%2), function, functional, hook(LIST.concat), klabel(_List_), left, smtlib(smt_seq_concat), symbol, unit(.List)]
+  syntax List ::= List "[" Int "<-" KItem "]" [function, hook(LIST.update), klabel(List:set)]
+  syntax List ::= "updateList" "(" List "," Int "," List ")" [function, hook(LIST.updateAll), klabel(updateList)]
+  syntax List ::= "range" "(" List "," Int "," Int ")" [function, hook(LIST.range), klabel(List:range), symbol]
+  syntax List ::= "project:List" "(" K ")" [function, projection]
+  syntax List ::= "makeList" "(" Int "," KItem ")" [function, hook(LIST.make), klabel(makeList)]
+  syntax List ::= "fillList" "(" List "," Int "," Int "," KItem ")" [function, hook(LIST.fill), klabel(fillList)]
+  syntax List ::= "ListItem" "(" KItem ")" [functional, hook(LIST.element), klabel(ListItem), smtlib(smt_seq_elem), symbol]
+  syntax List ::= ".List" [function, functional, hook(LIST.unit), klabel(.List), latex(\dotCt{List}), smtlib(smt_seq_nil), symbol]
+  syntax KItem ::= List "[" Int "]" [function, hook(LIST.get), klabel(List:get), symbol]
+  syntax KItem ::= List
+  syntax K
+  syntax Int ::= "size" "(" List ")" [function, functional, hook(LIST.size), klabel(sizeList), smtlib(smt_seq_len)]
+  syntax Bool ::= KItem "in" List [function, functional, hook(LIST.in), klabel(_inList_)]
+  syntax Bool ::= "isList" "(" K ")" [function, functional, predicate(List)]
+  rule `project:List`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module MAP [org.kframework.attributes.Location(Location(212,1,404,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports SET
+  imports LIST
+  imports INT-SYNTAX
+  imports BOOL-SYNTAX
+  syntax priority _|->_ > .Map _Map_
+  syntax associativity non-assoc _|->_ [org.kframework.attributes.Location(Location(260,3,260,25)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax associativity left _Map_
+  syntax Set ::= "keys" "(" Map ")" [function, functional, hook(MAP.keys), klabel(keys)]
+  syntax Map [hook(MAP.Map), org.kframework.attributes.Location(Location(218,3,218,29)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax Map ::= Map Map [assoc, comm, element(_|->_), format(%1%n%2), function, hook(MAP.concat), index(0), klabel(_Map_), left, symbol, unit(.Map)]
+  syntax Map ::= Map "[" KItem "<-" KItem "]" [function, functional, hook(MAP.update), klabel(Map:update), prefer, symbol]
+  syntax Map ::= Map "[" KItem "<-" "undef" "]" [function, functional, hook(MAP.remove), klabel(_[_<-undef]), symbol]
+  syntax Map ::= Map "-Map" Map [function, functional, hook(MAP.difference), latex({#1}-_{\it Map}{#2})]
+  syntax Map ::= KItem "|->" KItem [function, functional, hook(MAP.element), injective, klabel(_|->_), latex({#1}\mapsto{#2}), symbol]
+  syntax Map ::= "updateMap" "(" Map "," Map ")" [function, functional, hook(MAP.updateAll), klabel(updateMap)]
+  syntax Map ::= "removeAll" "(" Map "," Set ")" [function, functional, hook(MAP.removeAll), klabel(removeAll)]
+  syntax Map ::= "project:Map" "(" K ")" [function, projection]
+  syntax Map ::= ".Map" [function, functional, hook(MAP.unit), klabel(.Map), latex(\dotCt{Map}), symbol]
+  syntax List ::= "values" "(" Map ")" [function, hook(MAP.values), klabel(values)]
+  syntax List ::= "keys_list" "(" Map ")" [function, hook(MAP.keys_list)]
+  syntax KItem ::= Map "[" KItem "]" [function, hook(MAP.lookup), klabel(Map:lookup), symbol]
+  syntax KItem ::= Map "[" KItem "]" "orDefault" KItem [function, functional, hook(MAP.lookupOrDefault), klabel(Map:lookupOrDefault)]
+  syntax KItem ::= Map
+  syntax KItem ::= "choice" "(" Map ")" [function, hook(MAP.choice), klabel(Map:choice)]
+  syntax K
+  syntax Int ::= "size" "(" Map ")" [function, functional, hook(MAP.size), klabel(sizeMap)]
+  syntax Bool ::= Map "<=Map" Map [function, functional, hook(MAP.inclusion)]
+  syntax Bool ::= KItem "in_keys" "(" Map ")" [function, functional, hook(MAP.in_keys)]
+  syntax Bool ::= "isMap" "(" K ")" [function, functional, predicate(Map)]
+  rule `project:Map`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module MINT-SYNTAX [org.kframework.attributes.Location(Location(2680,1,2687,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax {Width} MInt{Width} ::= r"[\\+-]?[0-9]+[pP][0-9]+" [hook(MINT.literal), prec(2), token]
+  syntax MInt{Width} [hook(MINT.MInt), org.kframework.attributes.Location(Location(2683,3,2683,47)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+endmodule
+
+
+module ML-SYNTAX [not-lr1, org.kframework.attributes.Location(Location(137,1,164,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-K
+  syntax {Sort} Sort ::= Sort "#Or" Sort [assoc, comm, format(%i%1%d%n%2%n%i%3%d), klabel(#Or), left, mlOp, symbol, unit(#Bottom)]
+  syntax {Sort} Sort ::= Sort "#Implies" Sort [format(%i%1%d%n%2%n%i%3%d), klabel(#Implies), mlImplies, mlOp, symbol]
+  syntax {Sort} Sort ::= Sort "#And" Sort [assoc, comm, format(%i%1%d%n%2%n%i%3%d), klabel(#And), left, mlAnd, mlOp, symbol, unit(#Top)]
+  syntax {Sort} Sort ::= "#wEF" "(" Sort ")" [klabel(weakExistsFinally), mlOp, symbol]
+  syntax {Sort} Sort ::= "#wAF" "(" Sort ")" [klabel(weakAlwaysFinally), mlOp, symbol]
+  syntax {Sort} Sort ::= "#True" [klabel(#Top), mlUnary, symbol, unparseAvoid]
+  syntax {Sort} Sort ::= "#Top" [klabel(#Top), mlUnary, symbol]
+  syntax {Sort} Sort ::= "#Not" "(" Sort ")" [klabel(#Not), mlOp, mlUnary, symbol]
+  syntax {Sort} Sort ::= "#False" [klabel(#Bottom), mlUnary, symbol, unparseAvoid]
+  syntax {Sort} Sort ::= "#Bottom" [klabel(#Bottom), mlUnary, symbol]
+  syntax {Sort} Sort ::= "#AG" "(" Sort ")" [klabel(#AG), mlOp, symbol]
+  syntax {Sort1, Sort2} Sort2 ::= "{" Sort1 "#Equals" Sort1 "}" [format(%1%i%n%2%d%n%3%i%n%4%d%n%5), klabel(#Equals), mlEquals, mlOp, symbol]
+  syntax {Sort1, Sort2} Sort2 ::= "#Forall" Sort1 "." Sort2 [klabel(#Forall), mlBinder, mlOp, mlQuantifier, symbol]
+  syntax {Sort1, Sort2} Sort2 ::= "#Floor" "(" Sort1 ")" [klabel(#Floor), mlOp, mlUnary, symbol]
+  syntax {Sort1, Sort2} Sort2 ::= "#Exists" Sort1 "." Sort2 [klabel(#Exists), mlBinder, mlOp, mlQuantifier, symbol]
+  syntax {Sort1, Sort2} Sort2 ::= "#Ceil" "(" Sort1 ")" [klabel(#Ceil), mlOp, mlUnary, symbol]
+  syntax priority #Top #Floor #Ceil #Not #Bottom > #Equals > #And
+  syntax priority #Implies > #Exists #Forall
+  syntax priority #And > #Or > #Implies
+  syntax associativity left #Or
+  syntax associativity left #And
+  syntax K
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+endmodule
+
+
+module ORACLE [org.kframework.attributes.Location(Location(11,1,44,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/oracle.k))]
+  imports ORACLE-SYNTAX
+  imports EXECUTION
+  rule `<generatedTop>`(`<k>`(#KSequence(`exec(_)_EXECUTION-SYNTAX`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price)),_DotVar1)=>_DotVar1),THE_VARIABLE,`<B>`(`_List_`(_DotVar2)=>`_List_`(_DotVar2,`ListItem`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price)))),THE_VARIABLE,`<Oracle>`(O=>`Map:update`(O,`_in__EXECUTION-SYNTAX`(Oracle,ERC20Token),Price)),THE_VARIABLE) requires `_>=Int_`(Price,#token("10000000","Int")) ensures #token("true","Bool") [UNIQUE_ID(14ba5acf3edea674127ec6f9d538d1be45ba7464d94d78347c939ed0f99fb348), org.kframework.attributes.Location(Location(17,5,20,34)), org.kframework.attributes.Source(Source(/root/cff/venus-model/oracle.k)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]), topRule]
+  rule `<generatedTop>`(`<k>`(#KRewrite(#Or(#And(#KSequence(#Or(#And(`exec(_)_EXECUTION-SYNTAX`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price)),#Or(isRule(#token("146435590","K")))),#And(`_;_EXECUTION-SYNTAX`(S),#Or(isRule(#token("-1540721713","K")))),#And(`_in_gets__EXECUTION-SYNTAX`(Address,Token,#Or(#And(_Gen0,isRule(#token("-1338777280","K"))),#And(Amount,isRule(#token("1849042245","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),#Or(isRule(#token("-1475649852","K")))),#And(`__;_EXECUTION-SYNTAX`(B,S),#Or(isRule(#token("-1378298002","K")))),#And(TX,isRule(#token("-78552503","K")))),#Or(#And(_DotVar1,#Or(isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K")))),#And(THE_VARIABLE,isRule(#token("-1338777280","K"))))),#Or(isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K")))),#And(#EmptyK(.KList),#Or(isRule(#token("-842550567","K"))))),#Or(#And(#KSequence(S,_DotVar1),isRule(#token("-1540721713","K"))),#And(_DotVar1,isRule(#token("1849042245","K"))),#And(`DONE_EXECUTION-SYNTAX`(.KList),isRule(#token("-842550567","K"))),#And(#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1),isRule(#token("-78552503","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1),isRule(#token("-1475649852","K"))),#And(_DotVar1,isRule(#token("146435590","K"))),#And(#KSequence(B,#KSequence(S,_DotVar1)),isRule(#token("-1378298002","K")))))),#Or(#And(`<S>`(#KRewrite(#Or(#And(_Gen4,isRule(#token("1849042245","K"))),#And(B,isRule(#token("-1338777280","K")))),#Or(#And(`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int")),isRule(#token("-1338777280","K"))),#And(`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2),isRule(#token("1849042245","K")))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("146435590","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K")),isRule(#token("-1475649852","K"))))),#Or(#And(`<B>`(#KRewrite(`_List_`(_DotVar2),#And(`_List_`(_DotVar2,`ListItem`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price))),isRule(#token("146435590","K"))))),#Or(isRule(#token("146435590","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K"))))),THE_VARIABLE,#Or(#And(`<Oracle>`(#KRewrite(O,#And(`Map:update`(O,`_in__EXECUTION-SYNTAX`(Oracle,ERC20Token),Price),isRule(#token("146435590","K"))))),#Or(isRule(#token("146435590","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-842550567","K")),isRule(#token("-1540721713","K")),isRule(#token("-1378298002","K")),isRule(#token("-1338777280","K")),isRule(#token("-78552503","K")),isRule(#token("1849042245","K")),isRule(#token("-1475649852","K"))))),THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [mainAutomaton]
+endmodule
+
+
+module ORACLE-SYNTAX [org.kframework.attributes.Location(Location(3,1,9,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/oracle.k))]
+  imports EXECUTION-SYNTAX
+  syntax OracleTX ::= EVMAddress "updates the price of" EVMAddress "as" Int
+  syntax OracleTX ::= EVMAddress "offers new price of" EVMAddress "as" Int
+  syntax OracleTX ::= "project:OracleTX" "(" K ")" [function, projection]
+  syntax KItem ::= OracleTX
+  syntax K
+  syntax EVMTransaction ::= OracleTX
+  syntax EVMAddress ::= "Uniswap"
+  syntax EVMAddress ::= "USD"
+  syntax EVMAddress ::= "Chainlink"
+  syntax Bool ::= "isOracleTX" "(" K ")" [function, functional, predicate(OracleTX)]
+  rule `project:OracleTX`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module PROGRAM-LISTS [org.kframework.attributes.Location(Location(396,1,408,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-K
+  syntax K
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+endmodule
+
+
+module RECORD-PRODUCTIONS [org.kframework.attributes.Location(Location(417,1,422,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+endmodule
+
+
+module REQUIRES-ENSURES [org.kframework.attributes.Location(Location(334,1,345,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports BASIC-K
+  syntax K
+  syntax Bool ::= "is#RuleContent" "(" K ")" [function, functional, predicate(#RuleContent)]
+  syntax Bool ::= "is#RuleBody" "(" K ")" [function, functional, predicate(#RuleBody)]
+  syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol]
+  syntax #RuleContent ::= #RuleBody "when" Bool [klabel(#ruleRequires), symbol]
+  syntax #RuleContent ::= #RuleBody "when" Bool "ensures" Bool [klabel(#ruleRequiresEnsures), symbol]
+  syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol]
+  syntax #RuleContent ::= #RuleBody "requires" Bool "ensures" Bool [klabel(#ruleRequiresEnsures), symbol]
+  syntax #RuleContent ::= #RuleBody "ensures" Bool [klabel(#ruleEnsures), symbol]
+  syntax #RuleBody ::= K
+endmodule
+
+
+module RULE-CELLS [org.kframework.attributes.Location(Location(274,1,284,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports RULE-LISTS
+  imports KCELLS
+  syntax K
+  syntax Bool ::= "is#OptionalDots" "(" K ")" [function, functional, predicate(#OptionalDots)]
+  syntax #OptionalDots ::= "..." [klabel(#dots), symbol]
+  syntax #OptionalDots ::= "" [klabel(#noDots), symbol]
+endmodule
+
+
+module RULE-LISTS [org.kframework.attributes.Location(Location(410,1,415,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+endmodule
+
+
+module RULE-TAG-SYNTAX [org.kframework.attributes.Location(Location(2891,1,2895,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports BUILTIN-ID-TOKENS
+  syntax K
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  syntax Bool ::= "is#RuleTag" "(" K ")" [function, functional, predicate(#RuleTag)]
+  syntax #RuleTag ::= #LowerId [token]
+endmodule
+
+
+module SET [org.kframework.attributes.Location(Location(500,1,612,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports INT-SYNTAX
+  imports BASIC-K
+  syntax associativity left _|Set__SET
+  syntax associativity left _Set_
+  syntax Set [hook(SET.Set), org.kframework.attributes.Location(Location(504,3,504,29)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax Set ::= Set Set [assoc, comm, element(SetItem), format(%1%n%2), function, functional, hook(SET.concat), idem, klabel(_Set_), left, symbol, unit(.Set)]
+  syntax Set ::= Set "|Set" Set [function, functional, hook(SET.union), left]
+  syntax Set ::= Set "-Set" Set [function, functional, hook(SET.difference), klabel(Set:difference), latex({#1}-_{\it Set}{#2}), symbol]
+  syntax Set ::= "project:Set" "(" K ")" [function, projection]
+  syntax Set ::= "intersectSet" "(" Set "," Set ")" [function, functional, hook(SET.intersection), klabel(intersectSet)]
+  syntax Set ::= "SetItem" "(" KItem ")" [function, functional, hook(SET.element), injective, klabel(SetItem), symbol]
+  syntax Set ::= ".Set" [function, functional, hook(SET.unit), klabel(.Set), latex(\dotCt{Set}), symbol]
+  syntax KItem ::= Set
+  syntax KItem ::= "choice" "(" Set ")" [function, hook(SET.choice), klabel(Set:choice)]
+  syntax K
+  syntax Int ::= "size" "(" Set ")" [function, functional, hook(SET.size), klabel(size)]
+  syntax Bool ::= Set "<=Set" Set [function, functional, hook(SET.inclusion)]
+  syntax Bool ::= KItem "in" Set [function, functional, hook(SET.in), klabel(Set:in), symbol]
+  syntax Bool ::= "isSet" "(" K ")" [function, functional, predicate(Set)]
+  rule `project:Set`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `_|Set__SET`(S1,S2)=>`_Set_`(S1,`Set:difference`(S2,S1)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(4c1e88405889e02cd81c2016edfd68afd28e113a2cc755eaee068a9338b7c68b), org.kframework.attributes.Location(Location(553,8,553,45)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module SORT-BOOL [org.kframework.attributes.Location(Location(783,1,785,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax KItem ::= Bool
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool [hook(BOOL.Bool), org.kframework.attributes.Location(Location(784,3,784,32)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module SORT-K [org.kframework.attributes.Location(Location(26,1,28,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax K [hook(K.K), org.kframework.attributes.Location(Location(27,3,27,23)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module SORT-KBOTT [org.kframework.attributes.Location(Location(67,1,70,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  imports SORT-K
+  syntax KBott [org.kframework.attributes.Location(Location(69,3,69,15)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+  syntax K
+  syntax Bool ::= "isKBott" "(" K ")" [function, functional, predicate(KBott)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+endmodule
+
+
+module SORT-PREDICATES [org.kframework.attributes.Location(Location(424,1,429,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/kast.md))]
+endmodule
+
+
+module STDIN-STREAM [org.kframework.attributes.Location(Location(2497,1,2591,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+endmodule
+
+
+module STDOUT-STREAM [org.kframework.attributes.Location(Location(2593,1,2661,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+endmodule
+
+
+module STRING [org.kframework.attributes.Location(Location(1636,1,1640,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING-KAST
+  imports STRING-COMMON
+endmodule
+
+
+module STRING-COMMON [org.kframework.attributes.Location(Location(1414,1,1618,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING-SYNTAX
+  imports K-EQUAL
+  imports INT
+  imports FLOAT-SYNTAX
+  imports BOOL
+  syntax associativity left _==String__STRING-COMMON
+  syntax associativity left _=/=String__STRING-COMMON
+  syntax associativity left _+String__STRING-COMMON
+  syntax String ::= String "+String" String [function, functional, hook(STRING.concat), latex({#1}+_{\scriptstyle\it String}{#2}), left]
+  syntax String ::= "substrString" "(" String "," Int "," Int ")" [function, functional, hook(STRING.substr), klabel(substrString)]
+  syntax String ::= "replaceFirst" "(" String "," String "," String ")" [function, functional, hook(STRING.replaceFirst)]
+  syntax String ::= "replaceAll" "(" String "," String "," String ")" [function, functional, hook(STRING.replaceAll)]
+  syntax String ::= "replace" "(" String "," String "," String "," Int ")" [function, hook(STRING.replace)]
+  syntax String ::= "newUUID" [function, hook(STRING.uuid), impure]
+  syntax String ::= "directionalityChar" "(" String ")" [function, hook(STRING.directionality), klabel(directionalityChar)]
+  syntax String ::= "chrChar" "(" Int ")" [function, hook(STRING.chr), klabel(chrChar)]
+  syntax String ::= "categoryChar" "(" String ")" [function, hook(STRING.category), klabel(categoryChar)]
+  syntax String ::= "Int2String" "(" Int ")" [function, functional, hook(STRING.int2string), klabel(Int2String)]
+  syntax String ::= "Float2String" "(" Float "," String ")" [function, hook(STRING.floatFormat), klabel(FloatFormat)]
+  syntax String ::= "Float2String" "(" Float ")" [function, functional, hook(STRING.float2string), klabel(Float2String)]
+  syntax String ::= "Bool2String" "(" Bool ")" [function, functional, klabel(Bool2String)]
+  syntax String ::= "Base2String" "(" Int "," Int ")" [function, hook(STRING.base2string), klabel(Base2String)]
+  syntax Int ::= "rfindString" "(" String "," String "," Int ")" [function, hook(STRING.rfind), klabel(rfindString)]
+  syntax Int ::= "rfindChar" "(" String "," String "," Int ")" [function, hook(STRING.rfindChar), klabel(rfindChar)]
+  syntax Int ::= "ordChar" "(" String ")" [function, hook(STRING.ord), klabel(ordChar)]
+  syntax Int ::= "lengthString" "(" String ")" [function, functional, hook(STRING.length), klabel(lengthString)]
+  syntax Int ::= "findString" "(" String "," String "," Int ")" [function, hook(STRING.find), klabel(findString)]
+  syntax Int ::= "findChar" "(" String "," String "," Int ")" [function, hook(STRING.findChar), klabel(findChar)]
+  syntax Int ::= "countAllOccurrences" "(" String "," String ")" [function, functional, hook(STRING.countAllOccurrences)]
+  syntax Int ::= "String2Int" "(" String ")" [function, hook(STRING.string2int), klabel(String2Int)]
+  syntax Int ::= "String2Base" "(" String "," Int ")" [function, hook(STRING.string2base), klabel(String2Base)]
+  syntax Float ::= "String2Float" "(" String ")" [function, hook(STRING.string2float), klabel(String2Float)]
+  syntax Bool ::= String ">String" String [function, functional, hook(STRING.gt)]
+  syntax Bool ::= String ">=String" String [function, functional, hook(STRING.ge)]
+  syntax Bool ::= String "==String" String [function, functional, hook(STRING.eq), left]
+  syntax Bool ::= String "=/=String" String [function, functional, hook(STRING.ne), left]
+  syntax Bool ::= String "<String" String [function, functional, hook(STRING.lt)]
+  syntax Bool ::= String "<=String" String [function, functional, hook(STRING.le)]
+  syntax Bool ::= "String2Bool" "(" String ")" [function, klabel(String2Bool)]
+  rule rfindChar(_Gen0,#token("\"\"","String"),_Gen1)=>#token("-1","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(76e561ae7921937a7c38d0abf905fa087c450430c9c9203a61aed286862f80cf), org.kframework.attributes.Location(Location(1597,8,1597,33)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule rfindChar(S1,S2,I)=>`maxInt(_,_)_INT-COMMON`(rfindString(S1,substrString(S2,#token("0","Int"),#token("1","Int")),I),rfindChar(S1,substrString(S2,#token("1","Int"),lengthString(S2)),I)) requires `_=/=String__STRING-COMMON`(S2,#token("\"\"","String")) ensures #token("true","Bool") [UNIQUE_ID(ceac3ece9178498d1c2ebaa5144c78310bef0426a3b65b37a4e118ce8d60de83), org.kframework.attributes.Location(Location(1596,8,1596,182)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule findChar(_Gen0,#token("\"\"","String"),_Gen1)=>#token("-1","Int") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(8809e6c185fb902c35033d07c5f3945e817daf7cf69a590ce48468e081814a87), org.kframework.attributes.Location(Location(1595,8,1595,32)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule findChar(S1,S2,I)=>`#if_#then_#else_#fi_K-EQUAL-SYNTAX`(`_==Int_`(findString(S1,substrString(S2,#token("0","Int"),#token("1","Int")),I),#token("-1","Int")),findChar(S1,substrString(S2,#token("1","Int"),lengthString(S2)),I),`#if_#then_#else_#fi_K-EQUAL-SYNTAX`(`_==Int_`(findChar(S1,substrString(S2,#token("1","Int"),lengthString(S2)),I),#token("-1","Int")),findString(S1,substrString(S2,#token("0","Int"),#token("1","Int")),I),`minInt(_,_)_INT-COMMON`(findString(S1,substrString(S2,#token("0","Int"),#token("1","Int")),I),findChar(S1,substrString(S2,#token("1","Int"),lengthString(S2)),I)))) requires `_=/=String__STRING-COMMON`(S2,#token("\"\"","String")) ensures #token("true","Bool") [UNIQUE_ID(6bb73026dd2c1ad8aaa49238da5ccef31c5eb7ca52ca6e84b84f8ce584ea6d7c), org.kframework.attributes.Location(Location(1594,8,1594,431)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `replaceFirst(_,_,_)_STRING-COMMON`(Source,ToReplace,_Gen0)=>Source requires `_<Int_`(findString(Source,ToReplace,#token("0","Int")),#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(06399ce9368ab0d6edfb3d8871eefffd5592286c8a1bc4c05f89c3266985c405), org.kframework.attributes.Location(Location(1607,8,1608,57)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `replaceFirst(_,_,_)_STRING-COMMON`(Source,ToReplace,Replacement)=>`_+String__STRING-COMMON`(`_+String__STRING-COMMON`(substrString(Source,#token("0","Int"),findString(Source,ToReplace,#token("0","Int"))),Replacement),substrString(Source,`_+Int_`(findString(Source,ToReplace,#token("0","Int")),lengthString(ToReplace)),lengthString(Source))) requires `_>=Int_`(findString(Source,ToReplace,#token("0","Int")),#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(fe80de237795490e9c7f3fd030bdd538cd22766222b79fef41183c6e67db3d20), org.kframework.attributes.Location(Location(1604,8,1606,66)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `replaceAll(_,_,_)_STRING-COMMON`(Source,ToReplace,Replacement)=>`replace(_,_,_,_)_STRING-COMMON`(Source,ToReplace,Replacement,`countAllOccurrences(_,_)_STRING-COMMON`(Source,ToReplace)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(20bcb4788798bb3d9ceb0eda268cc115cc0e0726e5e02c19ac678f5e4533b7ee), org.kframework.attributes.Location(Location(1616,8,1616,154)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `replace(_,_,_,_)_STRING-COMMON`(Source,_Gen0,_Gen1,#token("0","Int"))=>Source requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(ec08d0755e39e608ceb3b8eea25cb52d0cb6d770a569269d9265cfa7f00ed220), org.kframework.attributes.Location(Location(1615,8,1615,49)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `replace(_,_,_,_)_STRING-COMMON`(Source,ToReplace,Replacement,Count)=>`_+String__STRING-COMMON`(`_+String__STRING-COMMON`(substrString(Source,#token("0","Int"),findString(Source,ToReplace,#token("0","Int"))),Replacement),`replace(_,_,_,_)_STRING-COMMON`(substrString(Source,`_+Int_`(findString(Source,ToReplace,#token("0","Int")),lengthString(ToReplace)),lengthString(Source)),ToReplace,Replacement,`_-Int_`(Count,#token("1","Int")))) requires `_>Int_`(Count,#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(1053e7d79982c97bb8fe675f2faa9ffe2acec21120e8f358dd31de6d501d4a7e), org.kframework.attributes.Location(Location(1611,8,1614,30)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `countAllOccurrences(_,_)_STRING-COMMON`(Source,ToCount)=>`_+Int_`(#token("1","Int"),`countAllOccurrences(_,_)_STRING-COMMON`(substrString(Source,`_+Int_`(findString(Source,ToCount,#token("0","Int")),lengthString(ToCount)),lengthString(Source)),ToCount)) requires `_>=Int_`(findString(Source,ToCount,#token("0","Int")),#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(7f4f9582056b7e8ef5e120fb8959c1c6e034d0fc846e61caeafc0e1746d3f3a6), org.kframework.attributes.Location(Location(1601,8,1602,60)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `countAllOccurrences(_,_)_STRING-COMMON`(Source,ToCount)=>#token("0","Int") requires `_<Int_`(findString(Source,ToCount,#token("0","Int")),#token("0","Int")) ensures #token("true","Bool") [UNIQUE_ID(c8ad017a52b2b6c1bb7cb7a9957934fecb920e361291a9d6f38ec27e81d6a683), org.kframework.attributes.Location(Location(1599,8,1600,59)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" Bool [klabel(#ruleRequires), symbol])]
+  rule `_>String__STRING-COMMON`(S1,S2)=>`_<String__STRING-COMMON`(S2,S1) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(274ba05242dd57e42162f0228df7da6f0382df1c0f904d6ef17f2b69f3441709), org.kframework.attributes.Location(Location(1591,8,1591,52)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_>=String__STRING-COMMON`(S1,S2)=>`notBool_`(`_<String__STRING-COMMON`(S1,S2)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(3c4297a0af95b0833ff766611733c4b962d266f17b049acca00f4a9a2537f3ec), org.kframework.attributes.Location(Location(1592,8,1592,63)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_=/=String__STRING-COMMON`(S1,S2)=>`notBool_`(`_==String__STRING-COMMON`(S1,S2)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(cb94edf924272d36a4999d7896015433ee4bec6badf643203f0b92cae6fda276), org.kframework.attributes.Location(Location(1570,8,1570,65)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `_<=String__STRING-COMMON`(S1,S2)=>`notBool_`(`_<String__STRING-COMMON`(S2,S1)) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(6de8c366249ecfc1f8ac9515ce317dfa26f0942569d899cfa9a190afb15af846), org.kframework.attributes.Location(Location(1590,8,1590,63)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `String2Bool`(#token("\"true\"","String"))=>#token("true","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(b00f815f83274e6c2d4fc019dd3d3ef7d01a6f0be6b2cca37d89bf29b7beb764), org.kframework.attributes.Location(Location(1496,8,1496,36)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `String2Bool`(#token("\"false\"","String"))=>#token("false","Bool") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(986df80c4285c2d88f2fff28ac77eef7c16c508771e1c1eb7c4ed1e17851cc8d), org.kframework.attributes.Location(Location(1497,8,1497,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `Bool2String`(#token("true","Bool"))=>#token("\"true\"","String") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(9b7618e80720ae55909befbfdf03afc6a0fe861018cbee466ee211c02a898b70), org.kframework.attributes.Location(Location(1490,8,1490,36)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+  rule `Bool2String`(#token("false","Bool"))=>#token("\"false\"","String") requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(da995691fae563c250945f5aaf5442547dfc715829593f47a28f82bbff07ec17), org.kframework.attributes.Location(Location(1491,8,1491,37)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module STRING-KAST [kast, org.kframework.attributes.Location(Location(1620,1,1626,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  imports STRING-COMMON
+  imports K-EQUAL
+  rule `_==String__STRING-COMMON`(S1,S2)=>`_==K_`(S1,S2) requires #token("true","Bool") ensures #token("true","Bool") [UNIQUE_ID(d8c0442e96ef7cfa88ccc9979b89edaead51f0dc7caf9258de1a2cf8ccea48d8), org.kframework.attributes.Location(Location(1624,8,1624,49)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md)), org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody [klabel(#ruleNoConditions), symbol])]
+endmodule
+
+
+module STRING-SYNTAX [org.kframework.attributes.Location(Location(1409,1,1412,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax String [hook(STRING.String), org.kframework.attributes.Location(Location(1410,3,1410,38)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax String ::= r"[\\\"](([^\\\"\\n\\r\\\\])|([\\\\][nrtf\\\"\\\\])|([\\\\][x][0-9a-fA-F]{2})|([\\\\][u][0-9a-fA-F]{4})|([\\\\][U][0-9a-fA-F]{8}))*[\\\"]" [token]
+  syntax String ::= "project:String" "(" K ")" [function, projection]
+  syntax KItem ::= String
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isString" "(" K ")" [function, functional, predicate(String)]
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:String`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
+
+
+module TOOL [org.kframework.attributes.Location(Location(9,1,12,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/tool.k))]
+  imports LENDING
+  imports AMMDEX
+  rule `<generatedTop>`(`<k>`(#KRewrite(#Or(#And(#KSequence(#Or(#And(`_;_EXECUTION-SYNTAX`(S),#Or(isRule(#token("-1540721713","K")))),#And(`_in_gets__EXECUTION-SYNTAX`(Address,Token,#Or(#And(_Gen0,isRule(#token("-1338777280","K"))),#And(Amount,isRule(#token("1849042245","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("1849042245","K")))),#And(`_in_gives__EXECUTION-SYNTAX`(Address,Token,Amount),#Or(isRule(#token("-1475649852","K")))),#And(`exec(_)_EXECUTION-SYNTAX`(#Or(#And(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault),#Or(isRule(#token("-349324124","K")))),#And(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token),#Or(isRule(#token("289552968","K")))),#And(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut),#Or(isRule(#token("-1451647566","K")))),#And(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price),#Or(isRule(#token("146435590","K")))),#And(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token),#Or(isRule(#token("569059051","K")))),#And(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault),#Or(isRule(#token("-944044967","K")))),#And(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut),#Or(isRule(#token("-717109357","K")))))),#Or(isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-944044967","K")),isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-717109357","K")),isRule(#token("-349324124","K")))),#And(`__;_EXECUTION-SYNTAX`(B,S),#Or(isRule(#token("-1378298002","K")))),#And(TX,isRule(#token("-78552503","K")))),#Or(#And(_DotVar1,#Or(isRule(#token("-1451647566","K")),isRule(#token("289552968","K")),isRule(#token("-1475649852","K")),isRule(#token("1849042245","K")),isRule(#token("-1540721713","K")),isRule(#token("-944044967","K")),isRule(#token("569059051","K")),isRule(#token("-1378298002","K")),isRule(#token("-717109357","K")),isRule(#token("146435590","K")),isRule(#token("-78552503","K")),isRule(#token("-349324124","K")))),#And(THE_VARIABLE,isRule(#token("-1338777280","K"))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("-1451647566","K")),isRule(#token("289552968","K")),isRule(#token("-1475649852","K")),isRule(#token("1849042245","K")),isRule(#token("-1540721713","K")),isRule(#token("-944044967","K")),isRule(#token("569059051","K")),isRule(#token("-1378298002","K")),isRule(#token("146435590","K")),isRule(#token("-717109357","K")),isRule(#token("-78552503","K")),isRule(#token("-349324124","K")))),#And(#EmptyK(.KList),#Or(isRule(#token("-842550567","K"))))),#Or(#And(_DotVar1,isRule(#token("1849042245","K"))),#And(#KSequence(B,#KSequence(S,_DotVar1)),isRule(#token("-1378298002","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gives__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1)),isRule(#token("-944044967","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,`_-Int_`(#token("0","Int"),TokenAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),`_-Int_`(#token("0","Int"),ETHAmount)),_DotVar1)),isRule(#token("289552968","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int")))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,`_+Int_`(`_/Int_`(`_*Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),TradeAmount),`_*Int_`(#token("997","Int"),`_-Int_`(USwapBalanceOut,TradeAmount))),#token("1","Int"))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),TradeAmount)),_DotVar1)))),isRule(#token("-1451647566","K"))),#And(_DotVar1,isRule(#token("146435590","K"))),#And(#KSequence(`exec(_)_EXECUTION-SYNTAX`(TX),_DotVar1),isRule(#token("-78552503","K"))),#And(#KSequence(`_in_gives__EXECUTION-SYNTAX`(User,ERC20Token,Amount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Vault,ERC20Token,Amount),_DotVar1)),isRule(#token("-349324124","K"))),#And(`DONE_EXECUTION-SYNTAX`(.KList),isRule(#token("-842550567","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),ERC20Token,TokenAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),#token("0","Int"),ETHAmount),_DotVar1)),isRule(#token("569059051","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenIn,`_-Int_`(#token("0","Int"),TradeAmount)),#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,TokenOut,`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount)))),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenIn,TradeAmount),#KSequence(`_in_gets__EXECUTION-SYNTAX`(`UniDex_AMMDEX-SYNTAX`(.KList),TokenOut,`_-Int_`(#token("0","Int"),`_/Int_`(`_*Int_`(`_*Int_`(#token("997","Int"),TradeAmount),USwapBalanceOut),`_+Int_`(`_*Int_`(#token("1000","Int"),USwapBalanceIn),`_*Int_`(#token("997","Int"),TradeAmount))))),_DotVar1)))),isRule(#token("-717109357","K"))),#And(#KSequence(S,_DotVar1),isRule(#token("-1540721713","K"))),#And(#KSequence(`_in_gets__EXECUTION-SYNTAX`(Address,Token,`_-Int_`(#token("0","Int"),Amount)),_DotVar1),isRule(#token("-1475649852","K")))))),#Or(#And(`<S>`(#KRewrite(#Or(#And(B,isRule(#token("-1338777280","K"))),#And(_Gen4,isRule(#token("1849042245","K"))),#And(_Gen3,#Or(isRule(#token("-1451647566","K")),isRule(#token("-717109357","K"))))),#Or(#And(`Map:update`(B,`_in__EXECUTION-SYNTAX`(Address,Token),#token("0","Int")),isRule(#token("-1338777280","K"))),#And(`_Map_`(`_|->_`(`_in__EXECUTION-SYNTAX`(Address,Token),`_+Int_`(Amount,OldBalance)),_DotVar2),isRule(#token("1849042245","K")))))),#Or(isRule(#token("-1338777280","K")),isRule(#token("-1451647566","K")),isRule(#token("1849042245","K")),isRule(#token("-717109357","K")))),#And(THE_VARIABLE,#Or(isRule(#token("289552968","K")),isRule(#token("-1475649852","K")),isRule(#token("-1540721713","K")),isRule(#token("-944044967","K")),isRule(#token("569059051","K")),isRule(#token("-842550567","K")),isRule(#token("-1378298002","K")),isRule(#token("146435590","K")),isRule(#token("-78552503","K")),isRule(#token("-349324124","K"))))),#Or(#And(`<B>`(#KRewrite(`_List_`(#Or(#And(_DotVar2,#Or(isRule(#token("289552968","K")),isRule(#token("-944044967","K")),isRule(#token("569059051","K")),isRule(#token("146435590","K")),isRule(#token("-349324124","K")))),#And(_DotVar3,#Or(isRule(#token("-1451647566","K")),isRule(#token("-717109357","K")))))),#Or(#And(`_List_`(_DotVar2,`ListItem`(`_borrows__from__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault))),isRule(#token("-944044967","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_deposits__to__LENDING-SYNTAX`(User,Amount,ERC20Token,Vault))),isRule(#token("-349324124","K"))),#And(`_List_`(_DotVar3,`ListItem`(`_in_swaps_inputfor__AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut))),isRule(#token("-717109357","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_adds_tokensand_ethofliquidityto__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token))),isRule(#token("569059051","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_updatesthepriceof_as__ORACLE-SYNTAX`(Oracle,ERC20Token,Price))),isRule(#token("146435590","K"))),#And(`_List_`(_DotVar3,`ListItem`(`_in_swaps_for_output_AMMDEX-SYNTAX`(Address,TokenIn,TradeAmount,TokenOut))),isRule(#token("-1451647566","K"))),#And(`_List_`(_DotVar2,`ListItem`(`_removes_tokensand_ethofliquidityfrom__AMMDEX-SYNTAX`(LiquidityProvider,TokenAmount,ETHAmount,ERC20Token))),isRule(#token("289552968","K")))))),#Or(isRule(#token("-1451647566","K")),isRule(#token("289552968","K")),isRule(#token("-944044967","K")),isRule(#token("569059051","K")),isRule(#token("-717109357","K")),isRule(#token("146435590","K")),isRule(#token("-349324124","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-1338777280","K")),isRule(#token("-1475649852","K")),isRule(#token("-1540721713","K")),isRule(#token("1849042245","K")),isRule(#token("-842550567","K")),isRule(#token("-1378298002","K")),isRule(#token("-78552503","K"))))),#Or(#And(`<Vault>`(#KRewrite(#Or(#And(_Gen4,isRule(#token("-944044967","K"))),#And(V,isRule(#token("-349324124","K")))),#And(`Map:update`(V,`_in__EXECUTION-SYNTAX`(Vault,User),Amount),isRule(#token("-349324124","K"))))),#Or(isRule(#token("-944044967","K")),isRule(#token("-349324124","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-1338777280","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-1475649852","K")),isRule(#token("-1540721713","K")),isRule(#token("1849042245","K")),isRule(#token("569059051","K")),isRule(#token("-842550567","K")),isRule(#token("-1378298002","K")),isRule(#token("146435590","K")),isRule(#token("-717109357","K")),isRule(#token("-78552503","K"))))),#Or(#And(`<Oracle>`(#KRewrite(O,#And(`Map:update`(O,`_in__EXECUTION-SYNTAX`(Oracle,ERC20Token),Price),isRule(#token("146435590","K"))))),#Or(isRule(#token("146435590","K")))),#And(THE_VARIABLE,#Or(isRule(#token("-1338777280","K")),isRule(#token("289552968","K")),isRule(#token("-1451647566","K")),isRule(#token("-1475649852","K")),isRule(#token("-1540721713","K")),isRule(#token("-944044967","K")),isRule(#token("1849042245","K")),isRule(#token("569059051","K")),isRule(#token("-842550567","K")),isRule(#token("-1378298002","K")),isRule(#token("-717109357","K")),isRule(#token("-78552503","K")),isRule(#token("-349324124","K"))))),THE_VARIABLE) requires #token("true","Bool") ensures #token("true","Bool") [mainAutomaton]
+endmodule
+
+
+module TOOL-SYNTAX [org.kframework.attributes.Location(Location(4,1,7,10)), org.kframework.attributes.Source(Source(/root/cff/venus-model/tool.k))]
+  imports LENDING-SYNTAX
+  imports AMMDEX-SYNTAX
+endmodule
+
+
+module UNSIGNED-INT-SYNTAX [org.kframework.attributes.Location(Location(904,1,907,10)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax KItem ::= Int
+  syntax KItem ::= "project:KItem" "(" K ")" [function, projection]
+  syntax K ::= "project:K" "(" K ")" [function, projection]
+  syntax K
+  syntax Int [hook(INT.Int), org.kframework.attributes.Location(Location(905,3,905,29)), org.kframework.attributes.Source(Source(/usr/include/kframework/builtin/domains.md))]
+  syntax Int ::= r"[0-9]+" [prec(2), prefer, token]
+  syntax Int ::= "project:Int" "(" K ")" [function, projection]
+  syntax Bool ::= "project:Bool" "(" K ")" [function, projection]
+  syntax Bool ::= "isKItem" "(" K ")" [function, functional, predicate(KItem)]
+  syntax Bool ::= "isK" "(" K ")" [function, functional, predicate(K)]
+  syntax Bool ::= "isInt" "(" K ")" [function, functional, predicate(Int)]
+  syntax Bool ::= "isBool" "(" K ")" [function, functional, predicate(Bool)]
+  rule `project:K`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:KItem`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Int`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+  rule `project:Bool`(K)=>K requires #token("true","Bool") ensures #token("true","Bool") [projection]
+endmodule
